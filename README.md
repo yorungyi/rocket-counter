@@ -118,9 +118,24 @@ node scripts/serve.mjs   # http://localhost:4173 에서 docs/ 확인 (서비스�
 
 서비스워커는 `file://`에서 동작하지 않으므로 PWA 확인은 반드시 서버로 해야 한다.
 
-## 데이터 갱신
+## 자동 최신화
 
-새 포켓몬이나 기술이 추가되면 원본을 다시 받아 빌드한다.
+`.github/workflows/update-data.yml` 이 **매주 월요일 05시(한국시간)** 원본을 다시 받아
+빌드하고, 실제로 달라진 게 있을 때만 커밋한다. 푸시되면 GitHub Pages가 자동 재배포되고
+설치된 앱은 다음에 온라인으로 열 때 새 버전을 받는다.
+
+`verify.mjs` 가 실패하면 거기서 멈추고 아무것도 푸시하지 않는다.
+상류 데이터가 깨졌을 때 잘못된 계산 결과가 배포되는 걸 막는 안전장치다.
+
+빌드 스크립트는 Node 내장 모듈만 쓰므로 CI에서 의존성 설치가 필요 없다
+(`sharp` 는 아이콘 생성용인데 아이콘은 이미 저장소에 있다).
+
+저장소 **Actions 탭 → 로켓단 데이터 최신화 → Run workflow** 로 언제든 수동 실행할 수 있다.
+GitHub는 60일간 활동이 없는 저장소의 예약 워크플로를 중지시키므로, 그때는 수동으로 한 번 돌리면 된다.
+
+## 수동 갱신
+
+직접 받아 빌드할 수도 있다.
 
 ```bash
 curl -o raw/gm_latest.json https://raw.githubusercontent.com/PokeMiners/game_masters/master/latest/latest.json

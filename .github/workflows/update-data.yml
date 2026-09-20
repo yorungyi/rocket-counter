@@ -1,0 +1,63 @@
+name: 로켓단 데이터 최신화
+
+# 로켓단 라인업은 로테이션마다 바뀐다. 매주 원본을 다시 받아 빌드하고,
+# 실제로 달라진 게 있을 때만 커밋한다. 푸시되면 GitHub Pages가 자동 재배포되고,
+# 설치된 앱은 다음에 온라인으로 열 때 새 버전을 받는다(서비스워커가 페이지를 네트워크 우선으로 가져옴).
+
+on:
+  schedule:
+    - cron: '0 20 * * 0'   # 매주 월요일 05:00 (한국시간)
+  workflow_dispatch:        # 저장소 Actions 탭에서 수동 실행도 가능
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # 빌드 스크립트는 Node 내장 모듈만 쓰므로 의존성 설치가 필요 없다.
+      # (sharp 는 아이콘 생성용인데 아이콘은 이미 저장소에 있다)
+      - name: 원본 데이터 내려받기
+        run: |
+          mkdir -p raw
+          curl -sfL --retry 3 -o raw/rocketLineups.json \
+            https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/rocketLineups.json
+          curl -sfL --retry 3 -o raw/gm_latest.json \
+            https://raw.githubusercontent.com/PokeMiners/game_masters/master/latest/latest.json
+          curl -sfL --retry 3 -o raw/pogoapi_pokedex.json \
+            https://pokemon-go-api.github.io/pokemon-go-api/api/pokedex.json
+          curl -sfL --retry 3 -o raw/i18n_korean.json \
+            "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Texts/Latest%20APK/JSON/i18n_korean.json"
+          ls -la raw/
+
+      # verify 가 실패하면 여기서 멈춘다 — 상류 데이터가 깨졌을 때
+      # 잘못된 계산 결과가 배포되는 걸 막는 안전장치다.
+      - name: 빌드 및 검증
+        run: |
+          node scripts/build-data.mjs
+          node scripts/verify.mjs
+          node scripts/bundle.mjs
+
+      - name: 변경분만 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data docs dist; then
+            echo "바뀐 내용 없음 — 커밋하지 않는다"
+            exit 0
+          fi
+          git add data docs dist
+          git commit -m "chore: 로켓단 데이터 자동 최신화 ($(date -u +%Y-%m-%d))"
+          git push
+          echo "최신화 완료"
