@@ -3,3 +3,4 @@ raw/
 .omc/
 .DS_Store
 Thumbs.db
+data/my-roster.json

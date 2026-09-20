@@ -32,13 +32,27 @@ const packed = {
   moves: Object.fromEntries(Object.entries(moves).map(([k, m]) =>
     [k, [m.ko, m.en, m.type, m.power, m.energy, m.duration, m.kind]])),
   pokemon: pokemon.map((p) =>
-    [p.id, p.ko, p.en, p.dex, p.atk, p.def, p.sta, p.types, p.fast, p.charged, p.cls, p.mega ? 1 : 0]),
+    [p.id, p.ko, p.en, p.dex, p.atk, p.def, p.sta, p.types, p.fast, p.charged, p.cls, p.mega ? 1 : 0, p.base]),
 };
 
 const engine = readFileSync(join(ROOT, 'src', 'engine.mjs'), 'utf8').replace(/^export /gm, '');
 const body = readFileSync(join(ROOT, 'web', 'index.html'), 'utf8')
   .replace('__ENGINE__', () => engine)
   .replace('__DATA__', () => JSON.stringify(packed).replace(/<\//g, '<\\/'));
+
+// ------------------------------------------------------------------ 구문 검사
+// 앱 스크립트는 한 덩어리라 구문 오류 하나면 페이지 전체가 죽는다.
+// 브라우저에서야 알아채면 늦으므로 여기서 파싱해 본다 (실행은 하지 않는다).
+{
+  const m = body.match(/<script>([\s\S]*?)<\/script>\s*$/);
+  if (!m) throw new Error('앱 스크립트 블록을 찾지 못했다 — web/index.html 구조 확인 필요');
+  try {
+    new Function(m[1]);
+  } catch (e) {
+    throw new Error(`앱 스크립트 구문 오류로 빌드 중단: ${e.message}`);
+  }
+  console.log('  구문 검사 통과');
+}
 
 // ------------------------------------------------- 1) 단일 파일 (Artifact/오프라인)
 mkdirSync(join(ROOT, 'dist'), { recursive: true });

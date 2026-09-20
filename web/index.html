@@ -195,6 +195,8 @@ details.opts>summary::before{content:"⚙  "; color:var(--muted)}
 .field input[type=range]{width:100%; accent-color:var(--accent)}
 
 /* roster */
+.field textarea{width:100%; min-height:86px; padding:9px 11px; border:1px solid var(--line-2);
+  border-radius:8px; background:var(--ground); resize:vertical; font-size:13.5px; font-family:var(--f-body)}
 .roster-search{width:100%; padding:9px 11px; border:1px solid var(--line-2);
   border-radius:8px; background:var(--ground)}
 .roster-hits{list-style:none; margin:8px 0 0; padding:0; display:grid;
@@ -292,9 +294,26 @@ details.opts>summary::before{content:"⚙  "; color:var(--muted)}
       <ul class="roster-hits" id="rhits"></ul>
       <ul class="owned" id="ownlist"></ul>
       <div class="bar-row">
+        <label class="switch"><input type="checkbox" id="megaOwned" checked> 보유 종의 메가진화도 후보에</label>
         <button class="btn sm" id="ownclear">전체 해제</button>
-        <span class="hint" style="margin:0">로켓단 대응에 쓰는 주력 30~50마리면 충분합니다. 브라우저에 저장됩니다.</span>
       </div>
+      <p class="hint">메가는 원종을 갖고 있으면 메가에너지로 쓸 수 있어 후보에 넣습니다.
+        목록은 이 브라우저에만 저장되며 어디에도 올라가지 않습니다.</p>
+
+      <details class="opts" id="io" style="margin-top:12px">
+        <summary>목록 가져오기 · 내보내기</summary>
+        <div class="opts-in" style="padding-top:2px">
+          <div class="field">
+            <label class="lbl" for="iotext">한글 이름을 쉼표나 줄바꿈으로 구분해 붙여넣으세요</label>
+            <textarea id="iotext" placeholder="괴력몬, 마기라스, 한카리아스 …"></textarea>
+            <div class="bar-row">
+              <button class="btn sm" id="ioimport">가져오기</button>
+              <button class="btn sm" id="ioexport">현재 목록 내보내기</button>
+            </div>
+            <p class="hint" id="iomsg"></p>
+          </div>
+        </div>
+      </details>
     </section>
     <section id="sheet-out"></section>
   </div>
@@ -338,7 +357,7 @@ const DB = {
     ko: v[0], en: v[1], type: v[2], power: v[3], energy: v[4], duration: v[5], kind: v[6] }])),
   pokemon: packed.pokemon.map((p) => ({
     id: p[0], ko: p[1], en: p[2], dex: p[3], atk: p[4], def: p[5], sta: p[6],
-    types: p[7], fast: p[8], charged: p[9], cls: p[10] || null, mega: !!p[11] })),
+    types: p[7], fast: p[8], charged: p[9], cls: p[10] || null, mega: !!p[11], base: p[12] })),
 };
 const ROCKET = packed.rocket;
 const BY_ID = new Map(DB.pokemon.map((p) => [p.id, p]));
@@ -363,18 +382,31 @@ const S = {
   slots: [[], [], []],
   myLevel: 40, mega: true, legendary: true,
   bossLevel: null,          // null = 모드별 자동 (조무래기 8 / 리더·보스 24)
-  owned: new Set(), onlyOwned: false, everOwned: false,
+  owned: new Set(), onlyOwned: false, everOwned: false, megaFromOwned: true,
 };
 
 /** 실제로 쓸 상대 레벨. 사용자가 직접 정했으면 그 값이 모든 모드에 우선한다. */
 function bossLevel(fallback) { return S.bossLevel ?? fallback; }
+
+/**
+ * 「보유한 것만」일 때의 후보 목록.
+ * 메가진화는 종을 갖고 있으면 메가에너지로 쓸 수 있으므로,
+ * 보유 종에서 파생되는 메가 폼도 후보에 넣을 수 있게 한다.
+ */
+function ownedPool() {
+  const ids = [...S.owned];
+  if (S.megaFromOwned) {
+    for (const p of DB.pokemon) if (p.mega && S.owned.has(p.base)) ids.push(p.id);
+  }
+  return ids;
+}
 
 function opts(extra = {}) {
   return {
     myLevel: S.myLevel,
     allowMega: S.mega,
     allowLegendary: S.legendary,
-    onlyIds: S.onlyOwned && S.owned.size ? [...S.owned] : null,
+    onlyIds: S.onlyOwned && S.owned.size ? ownedPool() : null,
     bossShadow: true,
     ...extra,
   };
@@ -404,7 +436,7 @@ function rows(list) {
       <div class="who">
         <div class="nm">${esc(r.ko)}
           ${r.mega ? '<span class="flag">메가</span>' : ''}
-          ${S.owned.has(r.id) ? '<span class="flag own">보유</span>' : ''}
+          ${S.owned.has(r.id) ? '<span class="flag own">보유</span>' : (r.mega && S.owned.has(BY_ID.get(r.id)?.base) ? '<span class="flag own">보유종</span>' : '')}
           ${r.types.map((t) => tb(t)).join('')}
         </div>
         <div class="mv">${esc(r.fastKo)} + ${esc(r.chargedKo)}</div>
@@ -582,7 +614,7 @@ function myBest(party, autoLevel, n = 3) {
     .map((m) => BY_ID.get(m.id)).filter(Boolean);
   if (!defenders.length) return [];
   const ranked = [];
-  for (const id of S.owned) {
+  for (const id of ownedPool()) {
     const atk = BY_ID.get(id);
     if (!atk || !atk.fast.length || !atk.charged.length) continue;
     const r = aggregate(atk, defenders, DB, opts({ bossLevel: bossLevel(autoLevel), onlyIds: null }));
@@ -628,7 +660,7 @@ function save() {
   try {
     localStorage.setItem('rocket-cfg', JSON.stringify({
       myLevel: S.myLevel, mega: S.mega, legendary: S.legendary, bossLevel: S.bossLevel,
-      owned: [...S.owned], onlyOwned: S.onlyOwned, everOwned: S.everOwned,
+      owned: [...S.owned], onlyOwned: S.onlyOwned, everOwned: S.everOwned, megaFromOwned: S.megaFromOwned,
       slots: S.slots, type: S.type, leader: S.leader, mode: S.mode,
     }));
   } catch {}
@@ -641,6 +673,7 @@ function load() {
     if (typeof v.legendary === 'boolean') S.legendary = v.legendary;
     if (typeof v.onlyOwned === 'boolean') S.onlyOwned = v.onlyOwned;
     if (typeof v.bossLevel === 'number' || v.bossLevel === null) S.bossLevel = v.bossLevel;
+    if (typeof v.megaFromOwned === 'boolean') S.megaFromOwned = v.megaFromOwned;
     if (Array.isArray(v.owned)) S.owned = new Set(v.owned.filter((id) => BY_ID.has(id)));
     if (typeof v.everOwned === 'boolean') S.everOwned = v.everOwned;
     if (Array.isArray(v.slots) && v.slots.length === 3) S.slots = v.slots;
@@ -727,6 +760,25 @@ function setMode(m) {
 el('calc').onclick = runManual;
 el('clear').onclick = () => { S.slots = [[], [], []]; renderSlots(); el('m-out').innerHTML = ''; save(); };
 el('ownclear').onclick = () => { S.owned.clear(); afterRosterChange(); };
+el('ioexport').onclick = () => {
+  el('iotext').value = [...S.owned].map((id) => BY_ID.get(id)?.ko ?? id).join(', ');
+  el('iomsg').textContent = `${S.owned.size}마리를 위 칸에 옮겼습니다. 복사해 두면 다른 기기에서 그대로 가져올 수 있습니다.`;
+};
+
+el('ioimport').onclick = () => {
+  const raw = el('iotext').value.trim();
+  if (!raw) { el('iomsg').textContent = '가져올 내용이 없습니다.'; return; }
+  const want = raw.split(/[,;\r\n\t]+/).map((t) => t.trim()).filter(Boolean);
+  const added = [], miss = [];
+  for (const w of want) {
+    const hit = DB.pokemon.find((p) => p.ko === w && p.fast.length && p.charged.length)
+      ?? DB.pokemon.find((p) => p.en.toLowerCase() === w.toLowerCase() && p.fast.length && p.charged.length);
+    if (hit) { S.owned.add(hit.id); added.push(hit.ko); } else miss.push(w);
+  }
+  el('iomsg').textContent = `${added.length}마리 등록` + (miss.length ? ` · 못 찾음: ${miss.join(', ')}` : ' · 전부 인식했습니다.');
+  afterRosterChange();
+};
+el('megaOwned').onchange = (e) => { S.megaFromOwned = e.target.checked; save(); rerun(); };
 
 el('mylv').oninput = (e) => { S.myLevel = +e.target.value; el('mylv-v').textContent = e.target.value; };
 el('mylv').onchange = () => { save(); rerun(); };
@@ -767,6 +819,7 @@ el('note').innerHTML = `
 load();
 el('mylv').value = S.myLevel; el('mylv-v').textContent = S.myLevel;
 el('megaOn').checked = S.mega; el('legOn').checked = S.legendary;
+el('megaOwned').checked = S.megaFromOwned;
 renderTypeGrid(); renderGruntVerdict(); renderWhoGrid(); renderSlots(); renderRoster(); paintBossLevel();
 setMode(S.mode);
 </script>
