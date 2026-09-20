@@ -904,7 +904,21 @@ function myBest(party, autoLevel, n = 3) {
     if (r) ranked.push(r);
   }
   ranked.sort((a, b) => b.score - a.score);
-  return ranked.slice(0, n);
+
+  // 한 전투에 낼 수 있는 메가진화(원시회귀 포함)는 한 마리뿐이다.
+  // 상위 N을 그냥 자르면 전부 메가가 되어 실제로는 꾸릴 수 없는 조합이 나오므로,
+  // 가장 좋은 메가 하나만 남기고 나머지는 비메가로 채운다.
+  const picks = [];
+  let megaTaken = false;
+  for (const r of ranked) {
+    if (r.mega) {
+      if (megaTaken) continue;
+      megaTaken = true;
+    }
+    picks.push(r);
+    if (picks.length === n) break;
+  }
+  return picks;
 }
 
 function sheetRow(label, picks, cls = '') {
