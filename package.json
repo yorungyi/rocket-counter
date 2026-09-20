@@ -1,0 +1,17 @@
+{
+  "name": "rocket-counter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "포켓몬GO 로켓단 대응기",
+  "scripts": {
+    "data": "node scripts/build-data.mjs",
+    "verify": "node scripts/verify.mjs",
+    "bundle": "node scripts/bundle.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "build": "npm run data && npm run verify && npm run icons && npm run bundle"
+  },
+  "dependencies": {
+    "sharp": "^0.35.4"
+  }
+}

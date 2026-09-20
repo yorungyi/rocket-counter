@@ -1,0 +1,201 @@
+[
+ {
+  "type": "BUG",
+  "quoteKey": "combat_grunt_quote_bug",
+  "quoteKo": "가랏! 내 벌레 포켓몬!",
+  "characters": [
+   "CHARACTER_BUG_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_BUG_BALLOON_GRUNT_MALE",
+   "CHARACTER_BUG_GRUNT_FEMALE",
+   "CHARACTER_BUG_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "DARK",
+  "quoteKey": "combat_grunt_quote_dark",
+  "quoteKo": "빛이 있으면 그늘이 있는 법.",
+  "characters": [
+   "CHARACTER_DARK_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_DARK_BALLOON_GRUNT_MALE",
+   "CHARACTER_DARK_GRUNT_FEMALE",
+   "CHARACTER_DARK_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "DRAGON",
+  "quoteKey": "combat_grunt_quote_dragon",
+  "quoteKo": "크아아아아! 무섭지!",
+  "characters": [
+   "CHARACTER_DRAGON_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_DRAGON_BALLOON_GRUNT_MALE",
+   "CHARACTER_DRAGON_GRUNT_FEMALE",
+   "CHARACTER_DRAGON_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "ELECTRIC",
+  "quoteKey": "combat_grunt_quote_electric",
+  "quoteKo": "짜릿하게 만들어주지!",
+  "characters": [
+   "CHARACTER_ELECTRIC_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_ELECTRIC_BALLOON_GRUNT_MALE",
+   "CHARACTER_ELECTRIC_GRUNT_FEMALE",
+   "CHARACTER_ELECTRIC_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "FAIRY",
+  "quoteKey": "combat_grunt_quote_fairy",
+  "quoteKo": "내 귀여운 포켓몬 어때!",
+  "characters": [
+   "CHARACTER_FAIRY_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_FAIRY_BALLOON_GRUNT_MALE",
+   "CHARACTER_FAIRY_GRUNT_FEMALE",
+   "CHARACTER_FAIRY_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "FIGHTING",
+  "quoteKey": "combat_grunt_quote_fighting",
+  "quoteKo": "이 단단한 몸은 장식이 아니야!",
+  "characters": [
+   "CHARACTER_FIGHTING_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_FIGHTING_BALLOON_GRUNT_MALE",
+   "CHARACTER_FIGHTING_GRUNT_FEMALE",
+   "CHARACTER_FIGHTING_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "FIRE",
+  "quoteKey": "combat_grunt_quote_fire",
+  "quoteKo": "포켓몬이 뱉어내는 불의 온도가 몇 도인지 알아?",
+  "characters": [
+   "CHARACTER_FIRE_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_FIRE_BALLOON_GRUNT_MALE",
+   "CHARACTER_FIRE_GRUNT_FEMALE",
+   "CHARACTER_FIRE_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "FLYING",
+  "quoteKey": "combat_grunt_quote_flying",
+  "quoteKo": "내 포켓몬이 화려하게 날아오른다!",
+  "characters": [
+   "CHARACTER_FLYING_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_FLYING_BALLOON_GRUNT_MALE",
+   "CHARACTER_FLYING_GRUNT_FEMALE",
+   "CHARACTER_FLYING_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "GHOST",
+  "quoteKey": "combat_grunt_quote_ghost",
+  "quoteKo": "흐... 흐... 흐... 흐... 흐흣!",
+  "characters": [
+   "CHARACTER_GHOST_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_GHOST_BALLOON_GRUNT_MALE",
+   "CHARACTER_GHOST_GRUNT_FEMALE",
+   "CHARACTER_GHOST_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "GRASS",
+  "quoteKey": "combat_grunt_quote_grass",
+  "quoteKo": "우릴 상관 마!",
+  "characters": [
+   "CHARACTER_GRASS_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_GRASS_BALLOON_GRUNT_MALE",
+   "CHARACTER_GRASS_GRUNT_FEMALE",
+   "CHARACTER_GRASS_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "GROUND",
+  "quoteKey": "combat_grunt_quote_ground",
+  "quoteKo": "땅에 때려눕혀 주지!",
+  "characters": [
+   "CHARACTER_GROUND_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_GROUND_BALLOON_GRUNT_MALE",
+   "CHARACTER_GROUND_GRUNT_FEMALE",
+   "CHARACTER_GROUND_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "ICE",
+  "quoteKey": "combat_grunt_quote_ice",
+  "quoteKo": "널 얼려버리겠다!",
+  "characters": [
+   "CHARACTER_ICE_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_ICE_BALLOON_GRUNT_MALE",
+   "CHARACTER_ICE_GRUNT_FEMALE",
+   "CHARACTER_ICE_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "NORMAL",
+  "quoteKey": "combat_grunt_quote_normal",
+  "quoteKo": "노말이 약하다고 생각해?",
+  "characters": [
+   "CHARACTER_NORMAL_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_NORMAL_BALLOON_GRUNT_MALE",
+   "CHARACTER_NORMAL_GRUNT_FEMALE",
+   "CHARACTER_NORMAL_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "POISON",
+  "quoteKey": "combat_grunt_quote_poison",
+  "quoteKo": "독으로 공격할 준비 완료!",
+  "characters": [
+   "CHARACTER_POISON_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_POISON_BALLOON_GRUNT_MALE",
+   "CHARACTER_POISON_GRUNT_FEMALE",
+   "CHARACTER_POISON_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "PSYCHIC",
+  "quoteKey": "combat_grunt_quote_psychic",
+  "quoteKo": "보이지 않는 힘을 쓰는 에스퍼를 무섭다고 생각해?",
+  "characters": [
+   "CHARACTER_PSYCHIC_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_PSYCHIC_BALLOON_GRUNT_MALE",
+   "CHARACTER_PSYCHIC_GRUNT_FEMALE",
+   "CHARACTER_PSYCHIC_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "ROCK",
+  "quoteKey": "combat_grunt_quote_rock",
+  "quoteKo": "렛츠 락앤롤!",
+  "characters": [
+   "CHARACTER_ROCK_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_ROCK_BALLOON_GRUNT_MALE",
+   "CHARACTER_ROCK_GRUNT_FEMALE",
+   "CHARACTER_ROCK_GRUNT_MALE"
+  ]
+ },
+ {
+  "type": "STEEL",
+  "quoteKey": "combat_grunt_quote_steel",
+  "quoteKo": "철벽 공격이다!",
+  "characters": [
+   "CHARACTER_METAL_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_METAL_BALLOON_GRUNT_MALE",
+   "CHARACTER_METAL_GRUNT_FEMALE",
+   "CHARACTER_METAL_GRUNT_MALE"
+  ],
+  "altQuoteKo": "철판 공격이다!"
+ },
+ {
+  "type": "WATER",
+  "quoteKey": "combat_grunt_quote_water",
+  "quoteKo": "이 바다는 위험해!",
+  "characters": [
+   "CHARACTER_WATER_BALLOON_GRUNT_FEMALE",
+   "CHARACTER_WATER_BALLOON_GRUNT_MALE",
+   "CHARACTER_WATER_GRUNT_FEMALE",
+   "CHARACTER_WATER_GRUNT_MALE"
+  ]
+ }
+]

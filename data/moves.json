@@ -1,0 +1,2657 @@
+{
+ "VINE_WHIP_FAST": {
+  "ko": "덩굴채찍",
+  "en": "Vine Whip",
+  "type": "GRASS",
+  "power": 6,
+  "energy": 5,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "TACKLE_FAST": {
+  "ko": "몸통박치기",
+  "en": "Tackle",
+  "type": "NORMAL",
+  "power": 5,
+  "energy": 5,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "SLUDGE_BOMB": {
+  "ko": "오물폭탄",
+  "en": "Sludge Bomb",
+  "type": "POISON",
+  "power": 85,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SEED_BOMB": {
+  "ko": "씨폭탄",
+  "en": "Seed Bomb",
+  "type": "GRASS",
+  "power": 55,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "POWER_WHIP": {
+  "ko": "파워휩",
+  "en": "Power Whip",
+  "type": "GRASS",
+  "power": 90,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "RAZOR_LEAF_FAST": {
+  "ko": "잎날가르기",
+  "en": "Razor Leaf",
+  "type": "GRASS",
+  "power": 13,
+  "energy": 7,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "SOLAR_BEAM": {
+  "ko": "솔라빔",
+  "en": "Solar Beam",
+  "type": "GRASS",
+  "power": 180,
+  "energy": -100,
+  "duration": 5000,
+  "kind": "charged"
+ },
+ "PETAL_BLIZZARD": {
+  "ko": "꽃보라",
+  "en": "Petal Blizzard",
+  "type": "GRASS",
+  "power": 110,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SLUDGE": {
+  "ko": "오물공격",
+  "en": "Sludge",
+  "type": "POISON",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "FRENZY_PLANT": {
+  "ko": "하드플랜트",
+  "en": "Frenzy Plant",
+  "type": "GRASS",
+  "power": 100,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "EMBER_FAST": {
+  "ko": "불꽃세례",
+  "en": "Ember",
+  "type": "FIRE",
+  "power": 10,
+  "energy": 10,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "SCRATCH_FAST": {
+  "ko": "할퀴기",
+  "en": "Scratch",
+  "type": "NORMAL",
+  "power": 6,
+  "energy": 4,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "FLAME_CHARGE": {
+  "ko": "니트로차지",
+  "en": "Flame Charge",
+  "type": "FIRE",
+  "power": 70,
+  "energy": -33,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "FLAME_BURST": {
+  "ko": "불꽃튀기기",
+  "en": "Flame Burst",
+  "type": "FIRE",
+  "power": 70,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "FLAMETHROWER": {
+  "ko": "화염방사",
+  "en": "Flamethrower",
+  "type": "FIRE",
+  "power": 65,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "FIRE_FANG_FAST": {
+  "ko": "불꽃엄니",
+  "en": "Fire Fang",
+  "type": "FIRE",
+  "power": 13,
+  "energy": 9,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "FIRE_PUNCH": {
+  "ko": "불꽃펀치",
+  "en": "Fire Punch",
+  "type": "FIRE",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "FIRE_SPIN_FAST": {
+  "ko": "회오리불꽃",
+  "en": "Fire Spin",
+  "type": "FIRE",
+  "power": 13,
+  "energy": 9,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "AIR_SLASH_FAST": {
+  "ko": "에어슬래시",
+  "en": "Air Slash",
+  "type": "FLYING",
+  "power": 12,
+  "energy": 8,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "WING_ATTACK_FAST": {
+  "ko": "날개치기",
+  "en": "Wing Attack",
+  "type": "FLYING",
+  "power": 10,
+  "energy": 11,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "DRAGON_BREATH_FAST": {
+  "ko": "용의숨결",
+  "en": "Dragon Breath",
+  "type": "DRAGON",
+  "power": 6,
+  "energy": 4,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "FIRE_BLAST": {
+  "ko": "불대문자",
+  "en": "Fire Blast",
+  "type": "FIRE",
+  "power": 140,
+  "energy": -100,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "DRAGON_CLAW": {
+  "ko": "드래곤클로",
+  "en": "Dragon Claw",
+  "type": "DRAGON",
+  "power": 45,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "OVERHEAT": {
+  "ko": "오버히트",
+  "en": "Overheat",
+  "type": "FIRE",
+  "power": 160,
+  "energy": -100,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "AIR_CUTTER": {
+  "ko": "에어커터",
+  "en": "Air Cutter",
+  "type": "FLYING",
+  "power": 55,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "BLAST_BURN": {
+  "ko": "블라스트번",
+  "en": "Blast Burn",
+  "type": "FIRE",
+  "power": 120,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "BUBBLE_FAST": {
+  "ko": "거품",
+  "en": "Bubble",
+  "type": "WATER",
+  "power": 10,
+  "energy": 12,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "AQUA_JET": {
+  "ko": "아쿠아제트",
+  "en": "Aqua Jet",
+  "type": "WATER",
+  "power": 45,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "AQUA_TAIL": {
+  "ko": "아쿠아테일",
+  "en": "Aqua Tail",
+  "type": "WATER",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "WATER_PULSE": {
+  "ko": "물의파동",
+  "en": "Water Pulse",
+  "type": "WATER",
+  "power": 65,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "WATER_GUN_FAST": {
+  "ko": "물대포",
+  "en": "Water Gun",
+  "type": "WATER",
+  "power": 5,
+  "energy": 5,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "BITE_FAST": {
+  "ko": "물기",
+  "en": "Bite",
+  "type": "DARK",
+  "power": 6,
+  "energy": 4,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "ICE_BEAM": {
+  "ko": "냉동빔",
+  "en": "Ice Beam",
+  "type": "ICE",
+  "power": 95,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "HYDRO_PUMP": {
+  "ko": "하이드로펌프",
+  "en": "Hydro Pump",
+  "type": "WATER",
+  "power": 135,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "ROLLOUT_FAST": {
+  "ko": "구르기",
+  "en": "Rollout",
+  "type": "ROCK",
+  "power": 15,
+  "energy": 19,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "FLASH_CANNON": {
+  "ko": "러스터캐논",
+  "en": "Flash Cannon",
+  "type": "STEEL",
+  "power": 100,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SKULL_BASH": {
+  "ko": "로켓박치기",
+  "en": "Skull Bash",
+  "type": "NORMAL",
+  "power": 130,
+  "energy": -100,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "HYDRO_CANNON": {
+  "ko": "하이드로캐논",
+  "en": "Hydro Cannon",
+  "type": "WATER",
+  "power": 90,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "BUG_BITE_FAST": {
+  "ko": "벌레먹기",
+  "en": "Bug Bite",
+  "type": "BUG",
+  "power": 5,
+  "energy": 6,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "STRUGGLE": {
+  "ko": "발버둥",
+  "en": "Struggle",
+  "type": "NORMAL",
+  "power": 35,
+  "energy": 0,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "STRUGGLE_BUG_FAST": {
+  "ko": "벌레의저항",
+  "en": "Struggle Bug",
+  "type": "BUG",
+  "power": 15,
+  "energy": 15,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "CONFUSION_FAST": {
+  "ko": "염동력",
+  "en": "Confusion",
+  "type": "PSYCHIC",
+  "power": 19,
+  "energy": 14,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "BUG_BUZZ": {
+  "ko": "벌레의야단법석",
+  "en": "Bug Buzz",
+  "type": "BUG",
+  "power": 95,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "PSYCHIC": {
+  "ko": "사이코키네시스",
+  "en": "Psychic",
+  "type": "PSYCHIC",
+  "power": 95,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "SIGNAL_BEAM": {
+  "ko": "시그널빔",
+  "en": "Signal Beam",
+  "type": "BUG",
+  "power": 75,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "POISON_STING_FAST": {
+  "ko": "독침",
+  "en": "Poison Sting",
+  "type": "POISON",
+  "power": 4,
+  "energy": 6,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "INFESTATION_FAST": {
+  "ko": "엉겨붙기",
+  "en": "Infestation",
+  "type": "BUG",
+  "power": 9,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "POISON_JAB_FAST": {
+  "ko": "독찌르기",
+  "en": "Poison Jab",
+  "type": "POISON",
+  "power": 13,
+  "energy": 9,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "AERIAL_ACE": {
+  "ko": "제비반환",
+  "en": "Aerial Ace",
+  "type": "FLYING",
+  "power": 55,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "X_SCISSOR": {
+  "ko": "시저크로스",
+  "en": "X-Scissor",
+  "type": "BUG",
+  "power": 45,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "FELL_STINGER": {
+  "ko": "마지막일침",
+  "en": "Fell Stinger",
+  "type": "BUG",
+  "power": 45,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "DRILL_RUN": {
+  "ko": "드릴라이너",
+  "en": "Drill Run",
+  "type": "GROUND",
+  "power": 85,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "QUICK_ATTACK_FAST": {
+  "ko": "전광석화",
+  "en": "Quick Attack",
+  "type": "NORMAL",
+  "power": 10,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "TWISTER": {
+  "ko": "회오리",
+  "en": "Twister",
+  "type": "DRAGON",
+  "power": 50,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "STEEL_WING_FAST": {
+  "ko": "강철날개",
+  "en": "Steel Wing",
+  "type": "STEEL",
+  "power": 14,
+  "energy": 8,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "GUST_FAST": {
+  "ko": "바람일으키기",
+  "en": "Gust",
+  "type": "FLYING",
+  "power": 25,
+  "energy": 20,
+  "duration": 2000,
+  "kind": "fast"
+ },
+ "HURRICANE": {
+  "ko": "폭풍",
+  "en": "Hurricane",
+  "type": "FLYING",
+  "power": 105,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "BRAVE_BIRD": {
+  "ko": "브레이브버드",
+  "en": "Brave Bird",
+  "type": "FLYING",
+  "power": 130,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "FEATHER_DANCE": {
+  "ko": "깃털댄스",
+  "en": "Feather Dance",
+  "type": "FLYING",
+  "power": 35,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "HEAT_WAVE": {
+  "ko": "열풍",
+  "en": "Heat Wave",
+  "type": "FIRE",
+  "power": 95,
+  "energy": -100,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "DIG": {
+  "ko": "구멍파기",
+  "en": "Dig",
+  "type": "GROUND",
+  "power": 100,
+  "energy": -50,
+  "duration": 4500,
+  "kind": "charged"
+ },
+ "HYPER_FANG": {
+  "ko": "필살앞니",
+  "en": "Hyper Fang",
+  "type": "NORMAL",
+  "power": 80,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "BODY_SLAM": {
+  "ko": "누르기",
+  "en": "Body Slam",
+  "type": "NORMAL",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "CRUNCH": {
+  "ko": "깨물어부수기",
+  "en": "Crunch",
+  "type": "DARK",
+  "power": 65,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "SHADOW_BALL": {
+  "ko": "섀도볼",
+  "en": "Shadow Ball",
+  "type": "GHOST",
+  "power": 100,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "HYPER_BEAM": {
+  "ko": "파괴광선",
+  "en": "Hyper Beam",
+  "type": "NORMAL",
+  "power": 150,
+  "energy": -100,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "PECK_FAST": {
+  "ko": "쪼기",
+  "en": "Peck",
+  "type": "FLYING",
+  "power": 10,
+  "energy": 10,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "DRILL_PECK": {
+  "ko": "회전부리",
+  "en": "Drill Peck",
+  "type": "FLYING",
+  "power": 70,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SKY_ATTACK": {
+  "ko": "불새",
+  "en": "Sky Attack",
+  "type": "FLYING",
+  "power": 80,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "FLY": {
+  "ko": "공중날기",
+  "en": "Fly",
+  "type": "FLYING",
+  "power": 90,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "ACID_FAST": {
+  "ko": "용해액",
+  "en": "Acid",
+  "type": "POISON",
+  "power": 11,
+  "energy": 10,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "WRAP": {
+  "ko": "김밥말이",
+  "en": "Wrap",
+  "type": "NORMAL",
+  "power": 60,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "POISON_FANG": {
+  "ko": "맹독엄니",
+  "en": "Poison Fang",
+  "type": "POISON",
+  "power": 30,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "GUNK_SHOT": {
+  "ko": "더스트슈트",
+  "en": "Gunk Shot",
+  "type": "POISON",
+  "power": 130,
+  "energy": -100,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "DRAGON_TAIL_FAST": {
+  "ko": "드래곤테일",
+  "en": "Dragon Tail",
+  "type": "DRAGON",
+  "power": 14,
+  "energy": 8,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "DARK_PULSE": {
+  "ko": "악의파동",
+  "en": "Dark Pulse",
+  "type": "DARK",
+  "power": 80,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "SLUDGE_WAVE": {
+  "ko": "오물웨이브",
+  "en": "Sludge Wave",
+  "type": "POISON",
+  "power": 105,
+  "energy": -100,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "ACID_SPRAY": {
+  "ko": "애시드봄",
+  "en": "Acid Spray",
+  "type": "POISON",
+  "power": 20,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "BRUTAL_SWING": {
+  "ko": "세차게휘두르기",
+  "en": "Brutal Swing",
+  "type": "DARK",
+  "power": 65,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "THUNDER_SHOCK_FAST": {
+  "ko": "전기쇼크",
+  "en": "Thunder Shock",
+  "type": "ELECTRIC",
+  "power": 4,
+  "energy": 7,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "PRESENT_FAST": {
+  "ko": "프레젠트",
+  "en": "Present",
+  "type": "NORMAL",
+  "power": 6,
+  "energy": 23,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "DISCHARGE": {
+  "ko": "방전",
+  "en": "Discharge",
+  "type": "ELECTRIC",
+  "power": 65,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "THUNDERBOLT": {
+  "ko": "10만볼트",
+  "en": "Thunderbolt",
+  "type": "ELECTRIC",
+  "power": 80,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "WILD_CHARGE": {
+  "ko": "와일드볼트",
+  "en": "Wild Charge",
+  "type": "ELECTRIC",
+  "power": 90,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SURF": {
+  "ko": "파도타기",
+  "en": "Surf",
+  "type": "WATER",
+  "power": 60,
+  "energy": -50,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "THUNDER": {
+  "ko": "번개",
+  "en": "Thunder",
+  "type": "ELECTRIC",
+  "power": 100,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "VOLT_SWITCH_FAST": {
+  "ko": "볼트체인지",
+  "en": "Volt Switch",
+  "type": "ELECTRIC",
+  "power": 13,
+  "energy": 20,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "SPARK_FAST": {
+  "ko": "스파크",
+  "en": "Spark",
+  "type": "ELECTRIC",
+  "power": 4,
+  "energy": 6,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "CHARM_FAST": {
+  "ko": "애교부리기",
+  "en": "Charm",
+  "type": "FAIRY",
+  "power": 20,
+  "energy": 11,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "BRICK_BREAK": {
+  "ko": "깨트리기",
+  "en": "Brick Break",
+  "type": "FIGHTING",
+  "power": 40,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "THUNDER_PUNCH": {
+  "ko": "번개펀치",
+  "en": "Thunder Punch",
+  "type": "ELECTRIC",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "TRAILBLAZE": {
+  "ko": "개척하기",
+  "en": "Trailblaze",
+  "type": "GRASS",
+  "power": 65,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "VOLT_TACKLE": {
+  "ko": "볼트태클",
+  "en": "Volt Tackle",
+  "type": "ELECTRIC",
+  "power": 90,
+  "energy": -33,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "GRASS_KNOT": {
+  "ko": "풀묶기",
+  "en": "Grass Knot",
+  "type": "GRASS",
+  "power": 90,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "PSYSHOCK": {
+  "ko": "사이코쇼크",
+  "en": "Psyshock",
+  "type": "PSYCHIC",
+  "power": 60,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "MUD_SHOT_FAST": {
+  "ko": "머드샷",
+  "en": "Mud Shot",
+  "type": "GROUND",
+  "power": 4,
+  "energy": 6,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "SAND_ATTACK_FAST": {
+  "ko": "모래뿌리기",
+  "en": "Sand Attack",
+  "type": "GROUND",
+  "power": 4,
+  "energy": 7,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "ROCK_SLIDE": {
+  "ko": "스톤샤워",
+  "en": "Rock Slide",
+  "type": "ROCK",
+  "power": 75,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SAND_TOMB": {
+  "ko": "모래지옥",
+  "en": "Sand Tomb",
+  "type": "GROUND",
+  "power": 60,
+  "energy": -33,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "ROCK_TOMB": {
+  "ko": "암석봉인",
+  "en": "Rock Tomb",
+  "type": "ROCK",
+  "power": 65,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "METAL_CLAW_FAST": {
+  "ko": "메탈클로",
+  "en": "Metal Claw",
+  "type": "STEEL",
+  "power": 6,
+  "energy": 5,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "POWDER_SNOW_FAST": {
+  "ko": "눈싸라기",
+  "en": "Powder Snow",
+  "type": "ICE",
+  "power": 6,
+  "energy": 15,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "BLIZZARD": {
+  "ko": "눈보라",
+  "en": "Blizzard",
+  "type": "ICE",
+  "power": 130,
+  "energy": -100,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "GYRO_BALL": {
+  "ko": "자이로볼",
+  "en": "Gyro Ball",
+  "type": "STEEL",
+  "power": 85,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "NIGHT_SLASH": {
+  "ko": "깜짝베기",
+  "en": "Night Slash",
+  "type": "DARK",
+  "power": 45,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "EARTHQUAKE": {
+  "ko": "지진",
+  "en": "Earthquake",
+  "type": "GROUND",
+  "power": 140,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "BULLDOZE": {
+  "ko": "땅고르기",
+  "en": "Bulldoze",
+  "type": "GROUND",
+  "power": 80,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "SCORCHING_SANDS": {
+  "ko": "열사의대지",
+  "en": "Scorching Sands",
+  "type": "GROUND",
+  "power": 90,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "SHADOW_CLAW_FAST": {
+  "ko": "섀도클로",
+  "en": "Shadow Claw",
+  "type": "GHOST",
+  "power": 6,
+  "energy": 4,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "ICE_PUNCH": {
+  "ko": "냉동펀치",
+  "en": "Ice Punch",
+  "type": "ICE",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "MUD_SLAP_FAST": {
+  "ko": "진흙뿌리기",
+  "en": "Mud-Slap",
+  "type": "GROUND",
+  "power": 19,
+  "energy": 13,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "STONE_EDGE": {
+  "ko": "스톤에지",
+  "en": "Stone Edge",
+  "type": "ROCK",
+  "power": 105,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "EARTH_POWER": {
+  "ko": "대지의힘",
+  "en": "Earth Power",
+  "type": "GROUND",
+  "power": 100,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "HORN_ATTACK": {
+  "ko": "뿔찌르기",
+  "en": "Horn Attack",
+  "type": "NORMAL",
+  "power": 45,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "IRON_TAIL_FAST": {
+  "ko": "아이언테일",
+  "en": "Iron Tail",
+  "type": "STEEL",
+  "power": 14,
+  "energy": 6,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "DOUBLE_KICK_FAST": {
+  "ko": "두번차기",
+  "en": "Double Kick",
+  "type": "FIGHTING",
+  "power": 10,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "FURY_CUTTER_FAST": {
+  "ko": "연속자르기",
+  "en": "Fury Cutter",
+  "type": "BUG",
+  "power": 4,
+  "energy": 8,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "MEGAHORN": {
+  "ko": "메가혼",
+  "en": "Megahorn",
+  "type": "BUG",
+  "power": 105,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "AVALANCHE": {
+  "ko": "눈사태",
+  "en": "Avalanche",
+  "type": "ICE",
+  "power": 85,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "POUND_FAST": {
+  "ko": "막치기",
+  "en": "Pound",
+  "type": "NORMAL",
+  "power": 6,
+  "energy": 5,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "ZEN_HEADBUTT_FAST": {
+  "ko": "사념의박치기",
+  "en": "Zen Headbutt",
+  "type": "PSYCHIC",
+  "power": 11,
+  "energy": 9,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "DISARMING_VOICE": {
+  "ko": "차밍보이스",
+  "en": "Disarming Voice",
+  "type": "FAIRY",
+  "power": 70,
+  "energy": -33,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "MOONBLAST": {
+  "ko": "문포스",
+  "en": "Moonblast",
+  "type": "FAIRY",
+  "power": 130,
+  "energy": -100,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "SWIFT": {
+  "ko": "스피드스타",
+  "en": "Swift",
+  "type": "NORMAL",
+  "power": 65,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "CHARGE_BEAM_FAST": {
+  "ko": "차지빔",
+  "en": "Charge Beam",
+  "type": "ELECTRIC",
+  "power": 7,
+  "energy": 14,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "FAIRY_WIND_FAST": {
+  "ko": "요정의바람",
+  "en": "Fairy Wind",
+  "type": "FAIRY",
+  "power": 9,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "DAZZLING_GLEAM": {
+  "ko": "매지컬샤인",
+  "en": "Dazzling Gleam",
+  "type": "FAIRY",
+  "power": 100,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "METEOR_MASH": {
+  "ko": "코멧펀치",
+  "en": "Meteor Mash",
+  "type": "STEEL",
+  "power": 100,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "DRAINING_KISS": {
+  "ko": "드레인키스",
+  "en": "Draining Kiss",
+  "type": "FAIRY",
+  "power": 60,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "WEATHER_BALL_FIRE": {
+  "ko": "웨더볼",
+  "en": "Weather Ball",
+  "type": "FIRE",
+  "power": 55,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "WEATHER_BALL_ICE": {
+  "ko": "웨더볼",
+  "en": "Weather Ball",
+  "type": "ICE",
+  "power": 55,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "FEINT_ATTACK_FAST": {
+  "ko": "속여때리기",
+  "en": "Feint Attack",
+  "type": "DARK",
+  "power": 11,
+  "energy": 10,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "ENERGY_BALL": {
+  "ko": "에너지볼",
+  "en": "Energy Ball",
+  "type": "GRASS",
+  "power": 90,
+  "energy": -50,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "CHILLING_WATER": {
+  "ko": "찬물끼얹기",
+  "en": "Chilling Water",
+  "type": "WATER",
+  "power": 65,
+  "energy": -33,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "PLAY_ROUGH": {
+  "ko": "치근거리기",
+  "en": "Play Rough",
+  "type": "FAIRY",
+  "power": 90,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "ICY_WIND": {
+  "ko": "얼어붙은바람",
+  "en": "Icy Wind",
+  "type": "ICE",
+  "power": 65,
+  "energy": -33,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "OMINOUS_WIND": {
+  "ko": "괴상한바람",
+  "en": "Ominous Wind",
+  "type": "GHOST",
+  "power": 55,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "CROSS_POISON": {
+  "ko": "크로스포이즌",
+  "en": "Cross Poison",
+  "type": "POISON",
+  "power": 40,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "PSYBEAM": {
+  "ko": "환상빔",
+  "en": "Psybeam",
+  "type": "PSYCHIC",
+  "power": 65,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "PSYWAVE_FAST": {
+  "ko": "사이코웨이브",
+  "en": "Psywave",
+  "type": "PSYCHIC",
+  "power": 4,
+  "energy": 7,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "SILVER_WIND": {
+  "ko": "은빛바람",
+  "en": "Silver Wind",
+  "type": "BUG",
+  "power": 65,
+  "energy": -33,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "MUD_BOMB": {
+  "ko": "진흙폭탄",
+  "en": "Mud Bomb",
+  "type": "GROUND",
+  "power": 60,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SUCKER_PUNCH_FAST": {
+  "ko": "기습",
+  "en": "Sucker Punch",
+  "type": "DARK",
+  "power": 5,
+  "energy": 6,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "IRON_HEAD": {
+  "ko": "아이언헤드",
+  "en": "Iron Head",
+  "type": "STEEL",
+  "power": 60,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "FOUL_PLAY": {
+  "ko": "속임수",
+  "en": "Foul Play",
+  "type": "DARK",
+  "power": 70,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "METAL_SOUND_FAST": {
+  "ko": "금속음",
+  "en": "Metal Sound",
+  "type": "STEEL",
+  "power": 4,
+  "energy": 6,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "POWER_GEM": {
+  "ko": "파워젬",
+  "en": "Power Gem",
+  "type": "ROCK",
+  "power": 80,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "PAYBACK": {
+  "ko": "보복",
+  "en": "Payback",
+  "type": "DARK",
+  "power": 95,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "CROSS_CHOP": {
+  "ko": "크로스촙",
+  "en": "Cross Chop",
+  "type": "FIGHTING",
+  "power": 50,
+  "energy": -50,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "BUBBLE_BEAM": {
+  "ko": "거품광선",
+  "en": "Bubble Beam",
+  "type": "WATER",
+  "power": 45,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SYNCHRONOISE": {
+  "ko": "싱크로노이즈",
+  "en": "Synchronoise",
+  "type": "PSYCHIC",
+  "power": 80,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "LIQUIDATION": {
+  "ko": "아쿠아브레이크",
+  "en": "Liquidation",
+  "type": "WATER",
+  "power": 70,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "KARATE_CHOP_FAST": {
+  "ko": "태권당수",
+  "en": "Karate Chop",
+  "type": "FIGHTING",
+  "power": 10,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "LOW_SWEEP": {
+  "ko": "로킥",
+  "en": "Low Sweep",
+  "type": "FIGHTING",
+  "power": 40,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "LOW_KICK_FAST": {
+  "ko": "안다리걸기",
+  "en": "Low Kick",
+  "type": "FIGHTING",
+  "power": 5,
+  "energy": 5,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "COUNTER_FAST": {
+  "ko": "카운터",
+  "en": "Counter",
+  "type": "FIGHTING",
+  "power": 13,
+  "energy": 9,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "CLOSE_COMBAT": {
+  "ko": "인파이트",
+  "en": "Close Combat",
+  "type": "FIGHTING",
+  "power": 105,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "RAGE_FIST": {
+  "ko": "분노의주먹",
+  "en": "Rage Fist",
+  "type": "GHOST",
+  "power": 100,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "FLAME_WHEEL": {
+  "ko": "화염바퀴",
+  "en": "Flame Wheel",
+  "type": "FIRE",
+  "power": 55,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SNARL_FAST": {
+  "ko": "바크아웃",
+  "en": "Snarl",
+  "type": "DARK",
+  "power": 11,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "THUNDER_FANG_FAST": {
+  "ko": "번개엄니",
+  "en": "Thunder Fang",
+  "type": "ELECTRIC",
+  "power": 10,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "PSYCHIC_FANGS": {
+  "ko": "사이코팽",
+  "en": "Psychic Fangs",
+  "type": "PSYCHIC",
+  "power": 25,
+  "energy": -33,
+  "duration": 1000,
+  "kind": "charged"
+ },
+ "ROCK_SMASH_FAST": {
+  "ko": "바위깨기",
+  "en": "Rock Smash",
+  "type": "FIGHTING",
+  "power": 17,
+  "energy": 12,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "SCALD": {
+  "ko": "열탕",
+  "en": "Scald",
+  "type": "WATER",
+  "power": 75,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "DYNAMIC_PUNCH": {
+  "ko": "폭발펀치",
+  "en": "Dynamic Punch",
+  "type": "FIGHTING",
+  "power": 85,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "POWER_UP_PUNCH": {
+  "ko": "그로우펀치",
+  "en": "Power-Up Punch",
+  "type": "FIGHTING",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SUBMISSION": {
+  "ko": "지옥의바퀴",
+  "en": "Submission",
+  "type": "FIGHTING",
+  "power": 55,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "PSYCHO_CUT_FAST": {
+  "ko": "사이코커터",
+  "en": "Psycho Cut",
+  "type": "PSYCHIC",
+  "power": 4,
+  "energy": 7,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "FUTURESIGHT": {
+  "ko": "미래예지",
+  "en": "Future Sight",
+  "type": "PSYCHIC",
+  "power": 115,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "FOCUS_BLAST": {
+  "ko": "기합구슬",
+  "en": "Focus Blast",
+  "type": "FIGHTING",
+  "power": 140,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "BULLET_PUNCH_FAST": {
+  "ko": "불릿펀치",
+  "en": "Bullet Punch",
+  "type": "STEEL",
+  "power": 10,
+  "energy": 11,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "HEAVY_SLAM": {
+  "ko": "헤비봄버",
+  "en": "Heavy Slam",
+  "type": "STEEL",
+  "power": 70,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "BULLET_SEED_FAST": {
+  "ko": "씨기관총",
+  "en": "Bullet Seed",
+  "type": "GRASS",
+  "power": 7,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "MAGICAL_LEAF_FAST": {
+  "ko": "매지컬리프",
+  "en": "Magical Leaf",
+  "type": "GRASS",
+  "power": 17,
+  "energy": 17,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "LEAF_BLADE": {
+  "ko": "리프블레이드",
+  "en": "Leaf Blade",
+  "type": "GRASS",
+  "power": 70,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "LEAF_TORNADO": {
+  "ko": "그래스믹서",
+  "en": "Leaf Tornado",
+  "type": "GRASS",
+  "power": 45,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "ROCK_THROW_FAST": {
+  "ko": "돌떨구기",
+  "en": "Rock Throw",
+  "type": "ROCK",
+  "power": 13,
+  "energy": 8,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "ROCK_BLAST": {
+  "ko": "록블라스트",
+  "en": "Rock Blast",
+  "type": "ROCK",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "ANCIENT_POWER": {
+  "ko": "원시의힘",
+  "en": "Ancient Power",
+  "type": "ROCK",
+  "power": 70,
+  "energy": -33,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "STOMP": {
+  "ko": "짓밟기",
+  "en": "Stomp",
+  "type": "NORMAL",
+  "power": 50,
+  "energy": -50,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "INCINERATE_FAST": {
+  "ko": "불태우기",
+  "en": "Incinerate",
+  "type": "FIRE",
+  "power": 32,
+  "energy": 22,
+  "duration": 2500,
+  "kind": "fast"
+ },
+ "HIGH_HORSEPOWER": {
+  "ko": "10만마력",
+  "en": "High Horsepower",
+  "type": "GROUND",
+  "power": 105,
+  "energy": -100,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "DRAIN_PUNCH": {
+  "ko": "드레인펀치",
+  "en": "Drain Punch",
+  "type": "FIGHTING",
+  "power": 50,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "MAGNET_BOMB": {
+  "ko": "마그넷봄",
+  "en": "Magnet Bomb",
+  "type": "STEEL",
+  "power": 75,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "ZAP_CANNON": {
+  "ko": "전자포",
+  "en": "Zap Cannon",
+  "type": "ELECTRIC",
+  "power": 140,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "CUT_FAST": {
+  "ko": "풀베기",
+  "en": "Cut",
+  "type": "NORMAL",
+  "power": 5,
+  "energy": 5,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "ICE_SHARD_FAST": {
+  "ko": "얼음뭉치",
+  "en": "Ice Shard",
+  "type": "ICE",
+  "power": 10,
+  "energy": 10,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "LICK_FAST": {
+  "ko": "핥기",
+  "en": "Lick",
+  "type": "GHOST",
+  "power": 5,
+  "energy": 6,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "AURORA_BEAM": {
+  "ko": "오로라빔",
+  "en": "Aurora Beam",
+  "type": "ICE",
+  "power": 80,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "FROST_BREATH_FAST": {
+  "ko": "얼음숨결",
+  "en": "Frost Breath",
+  "type": "ICE",
+  "power": 11,
+  "energy": 9,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "RAZOR_SHELL": {
+  "ko": "셸블레이드",
+  "en": "Razor Shell",
+  "type": "WATER",
+  "power": 55,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "ASTONISH_FAST": {
+  "ko": "놀래키기",
+  "en": "Astonish",
+  "type": "GHOST",
+  "power": 7,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "NIGHT_SHADE": {
+  "ko": "나이트헤드",
+  "en": "Night Shade",
+  "type": "GHOST",
+  "power": 60,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "SHADOW_PUNCH": {
+  "ko": "섀도펀치",
+  "en": "Shadow Punch",
+  "type": "GHOST",
+  "power": 35,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "HEX_FAST": {
+  "ko": "병상첨병",
+  "en": "Hex",
+  "type": "GHOST",
+  "power": 8,
+  "energy": 13,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "BREAKING_SWIPE": {
+  "ko": "와이드브레이커",
+  "en": "Breaking Swipe",
+  "type": "DRAGON",
+  "power": 45,
+  "energy": -33,
+  "duration": 1000,
+  "kind": "charged"
+ },
+ "VICE_GRIP": {
+  "ko": "찝기",
+  "en": "Vise Grip",
+  "type": "NORMAL",
+  "power": 35,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "CRABHAMMER": {
+  "ko": "집게해머",
+  "en": "Crabhammer",
+  "type": "WATER",
+  "power": 85,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "EXTRASENSORY_FAST": {
+  "ko": "신통력",
+  "en": "Extrasensory",
+  "type": "PSYCHIC",
+  "power": 11,
+  "energy": 11,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "DRAGON_PULSE": {
+  "ko": "용의파동",
+  "en": "Dragon Pulse",
+  "type": "DRAGON",
+  "power": 90,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "DRACO_METEOR": {
+  "ko": "용성군",
+  "en": "Draco Meteor",
+  "type": "DRAGON",
+  "power": 150,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "BONE_CLUB": {
+  "ko": "뼈다귀치기",
+  "en": "Bone Club",
+  "type": "GROUND",
+  "power": 40,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "SHADOW_BONE": {
+  "ko": "섀도본",
+  "en": "Shadow Bone",
+  "type": "GHOST",
+  "power": 85,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "BLAZE_KICK": {
+  "ko": "블레이즈킥",
+  "en": "Blaze Kick",
+  "type": "FIRE",
+  "power": 40,
+  "energy": -33,
+  "duration": 1000,
+  "kind": "charged"
+ },
+ "OUTRAGE": {
+  "ko": "역린",
+  "en": "Outrage",
+  "type": "DRAGON",
+  "power": 110,
+  "energy": -50,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "WATERFALL_FAST": {
+  "ko": "폭포오르기",
+  "en": "Waterfall",
+  "type": "WATER",
+  "power": 13,
+  "energy": 7,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "HIDDEN_POWER_FAST": {
+  "ko": "잠재파워",
+  "en": "Hidden Power",
+  "type": "NORMAL",
+  "power": 15,
+  "energy": 15,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "TRIPLE_AXEL": {
+  "ko": "트리플악셀",
+  "en": "Triple Axel",
+  "type": "ICE",
+  "power": 60,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SUPER_POWER": {
+  "ko": "엄청난힘",
+  "en": "Superpower",
+  "type": "FIGHTING",
+  "power": 85,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "SPLASH_FAST": {
+  "ko": "튀어오르기",
+  "en": "Splash",
+  "type": "WATER",
+  "power": 0,
+  "energy": 17,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "SPARKLING_ARIA": {
+  "ko": "물거품아리아",
+  "en": "Sparkling Aria",
+  "type": "WATER",
+  "power": 85,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "TRANSFORM_FAST": {
+  "ko": "변신",
+  "en": "Transform",
+  "type": "NORMAL",
+  "power": 0,
+  "energy": 0,
+  "duration": 2000,
+  "kind": "fast"
+ },
+ "LAST_RESORT": {
+  "ko": "비장의무기",
+  "en": "Last Resort",
+  "type": "NORMAL",
+  "power": 90,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "BRINE": {
+  "ko": "소금물",
+  "en": "Brine",
+  "type": "WATER",
+  "power": 65,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "YAWN_FAST": {
+  "ko": "하품",
+  "en": "Yawn",
+  "type": "NORMAL",
+  "power": 0,
+  "energy": 13,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "PSYSTRIKE": {
+  "ko": "사이코브레이크",
+  "en": "Psystrike",
+  "type": "PSYCHIC",
+  "power": 95,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "ICE_FANG_FAST": {
+  "ko": "얼음엄니",
+  "en": "Ice Fang",
+  "type": "ICE",
+  "power": 12,
+  "energy": 20,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "ACROBATICS": {
+  "ko": "애크러뱃",
+  "en": "Acrobatics",
+  "type": "FLYING",
+  "power": 100,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SHADOW_SNEAK": {
+  "ko": "야습",
+  "en": "Shadow Sneak",
+  "type": "GHOST",
+  "power": 50,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "LUNGE": {
+  "ko": "덤벼들기",
+  "en": "Lunge",
+  "type": "BUG",
+  "power": 55,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "METEOR_BEAM": {
+  "ko": "메테오빔",
+  "en": "Meteor Beam",
+  "type": "ROCK",
+  "power": 140,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "WEATHER_BALL_WATER": {
+  "ko": "웨더볼",
+  "en": "Weather Ball",
+  "type": "WATER",
+  "power": 55,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "LEAF_STORM": {
+  "ko": "리프스톰",
+  "en": "Leaf Storm",
+  "type": "GRASS",
+  "power": 130,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "MIRROR_COAT": {
+  "ko": "미러코트",
+  "en": "Mirror Coat",
+  "type": "PSYCHIC",
+  "power": 60,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "MIRROR_SHOT": {
+  "ko": "미러샷",
+  "en": "Mirror Shot",
+  "type": "STEEL",
+  "power": 50,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "UPPER_HAND": {
+  "ko": "기선제압",
+  "en": "Upper Hand",
+  "type": "FIGHTING",
+  "power": 50,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "ICICLE_SPEAR": {
+  "ko": "고드름침",
+  "en": "Icicle Spear",
+  "type": "ICE",
+  "power": 55,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "LOCK_ON_FAST": {
+  "ko": "록온",
+  "en": "Lock-On",
+  "type": "NORMAL",
+  "power": 2,
+  "energy": 10,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "OCTAZOOKA": {
+  "ko": "대포무노포",
+  "en": "Octazooka",
+  "type": "WATER",
+  "power": 55,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "TRI_ATTACK": {
+  "ko": "트라이어택",
+  "en": "Tri Attack",
+  "type": "NORMAL",
+  "power": 75,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "AURA_SPHERE": {
+  "ko": "파동탄",
+  "en": "Aura Sphere",
+  "type": "FIGHTING",
+  "power": 100,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SMACK_DOWN_FAST": {
+  "ko": "떨어뜨리기",
+  "en": "Smack Down",
+  "type": "ROCK",
+  "power": 13,
+  "energy": 7,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "AEROBLAST": {
+  "ko": "에어로블라스트",
+  "en": "Aeroblast",
+  "type": "FLYING",
+  "power": 180,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "SACRED_FIRE": {
+  "ko": "성스러운불꽃",
+  "en": "Sacred Fire",
+  "type": "FIRE",
+  "power": 120,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "MUDDY_WATER": {
+  "ko": "탁류",
+  "en": "Muddy Water",
+  "type": "WATER",
+  "power": 45,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "TAKE_DOWN_FAST": {
+  "ko": "돌진",
+  "en": "Take Down",
+  "type": "NORMAL",
+  "power": 7,
+  "energy": 8,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "FORCE_PALM_FAST": {
+  "ko": "발경",
+  "en": "Force Palm",
+  "type": "FIGHTING",
+  "power": 10,
+  "energy": 16,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "BOOMBURST": {
+  "ko": "폭음파",
+  "en": "Boomburst",
+  "type": "NORMAL",
+  "power": 150,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "POLTERGEIST": {
+  "ko": "폴터가이스트",
+  "en": "Poltergeist",
+  "type": "GHOST",
+  "power": 140,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "MIST_BALL": {
+  "ko": "미스트볼",
+  "en": "Mist Ball",
+  "type": "PSYCHIC",
+  "power": 105,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "LUSTER_PURGE": {
+  "ko": "러스터퍼지",
+  "en": "Luster Purge",
+  "type": "PSYCHIC",
+  "power": 100,
+  "energy": -100,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "ORIGIN_PULSE": {
+  "ko": "근원의파동",
+  "en": "Origin Pulse",
+  "type": "WATER",
+  "power": 120,
+  "energy": -100,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "PRECIPICE_BLADES": {
+  "ko": "단애의칼",
+  "en": "Precipice Blades",
+  "type": "GROUND",
+  "power": 120,
+  "energy": -100,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "DOOM_DESIRE": {
+  "ko": "파멸의소원",
+  "en": "Doom Desire",
+  "type": "STEEL",
+  "power": 65,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "PSYCHO_BOOST": {
+  "ko": "사이코부스트",
+  "en": "Psycho Boost",
+  "type": "PSYCHIC",
+  "power": 130,
+  "energy": -33,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "MYSTICAL_FIRE": {
+  "ko": "매지컬플레임",
+  "en": "Mystical Fire",
+  "type": "FIRE",
+  "power": 60,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "WEATHER_BALL_ROCK": {
+  "ko": "웨더볼",
+  "en": "Weather Ball",
+  "type": "ROCK",
+  "power": 55,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "LEAFAGE_FAST": {
+  "ko": "나뭇잎",
+  "en": "Leafage",
+  "type": "GRASS",
+  "power": 6,
+  "energy": 4,
+  "duration": 500,
+  "kind": "fast"
+ },
+ "ROCK_WRECKER": {
+  "ko": "암석포",
+  "en": "Rock Wrecker",
+  "type": "ROCK",
+  "power": 110,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "SACRED_SWORD": {
+  "ko": "성스러운칼",
+  "en": "Sacred Sword",
+  "type": "FIGHTING",
+  "power": 50,
+  "energy": -33,
+  "duration": 1000,
+  "kind": "charged"
+ },
+ "MAGMA_STORM": {
+  "ko": "마그마스톰",
+  "en": "Magma Storm",
+  "type": "FIRE",
+  "power": 75,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "GIGA_IMPACT": {
+  "ko": "기가임팩트",
+  "en": "Giga Impact",
+  "type": "NORMAL",
+  "power": 200,
+  "energy": -100,
+  "duration": 4500,
+  "kind": "charged"
+ },
+ "CRUSH_GRIP": {
+  "ko": "묵사발",
+  "en": "Crush Grip",
+  "type": "NORMAL",
+  "power": 210,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SHADOW_FORCE": {
+  "ko": "섀도다이브",
+  "en": "Shadow Force",
+  "type": "GHOST",
+  "power": 140,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SEED_FLARE": {
+  "ko": "시드플레어",
+  "en": "Seed Flare",
+  "type": "GRASS",
+  "power": 115,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "V_CREATE": {
+  "ko": "V제너레이트",
+  "en": "V-create",
+  "type": "FIRE",
+  "power": 105,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "WATER_SHURIKEN_FAST": {
+  "ko": "물수리검",
+  "en": "Water Shuriken",
+  "type": "WATER",
+  "power": 9,
+  "energy": 14,
+  "duration": 1000,
+  "kind": "fast"
+ },
+ "HIGH_JUMP_KICK": {
+  "ko": "무릎차기",
+  "en": "High Jump Kick",
+  "type": "FIGHTING",
+  "power": 90,
+  "energy": -100,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "BLEAKWIND_STORM": {
+  "ko": "찬바람폭풍",
+  "en": "Bleakwind Storm",
+  "type": "FLYING",
+  "power": 150,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "WILDBOLT_STORM": {
+  "ko": "번개폭풍",
+  "en": "Wildbolt Storm",
+  "type": "ELECTRIC",
+  "power": 150,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "FUSION_FLARE": {
+  "ko": "크로스플레임",
+  "en": "Fusion Flare",
+  "type": "FIRE",
+  "power": 140,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "FUSION_BOLT": {
+  "ko": "크로스썬더",
+  "en": "Fusion Bolt",
+  "type": "ELECTRIC",
+  "power": 140,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SANDSEAR_STORM": {
+  "ko": "열사의폭풍",
+  "en": "Sandsear Storm",
+  "type": "GROUND",
+  "power": 150,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "GLACIATE": {
+  "ko": "얼어붙은세계",
+  "en": "Glaciate",
+  "type": "ICE",
+  "power": 160,
+  "energy": -100,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "TECHNO_BLAST_BURN": {
+  "ko": "테크노버스터",
+  "en": "Techno Blast",
+  "type": "FIRE",
+  "power": 120,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "TECHNO_BLAST_CHILL": {
+  "ko": "테크노버스터",
+  "en": "Techno Blast",
+  "type": "ICE",
+  "power": 120,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "TECHNO_BLAST_WATER": {
+  "ko": "테크노버스터",
+  "en": "Techno Blast",
+  "type": "WATER",
+  "power": 120,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "TECHNO_BLAST_SHOCK": {
+  "ko": "테크노버스터",
+  "en": "Techno Blast",
+  "type": "ELECTRIC",
+  "power": 120,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "PARABOLIC_CHARGE": {
+  "ko": "파라볼라차지",
+  "en": "Parabolic Charge",
+  "type": "ELECTRIC",
+  "power": 70,
+  "energy": -50,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "FLYING_PRESS": {
+  "ko": "플라잉프레스",
+  "en": "Flying Press",
+  "type": "FIGHTING",
+  "power": 115,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "GEOMANCY_FAST": {
+  "ko": "지오컨트롤",
+  "en": "Geomancy",
+  "type": "FAIRY",
+  "power": 20,
+  "energy": 14,
+  "duration": 1500,
+  "kind": "fast"
+ },
+ "OBLIVION_WING": {
+  "ko": "데스윙",
+  "en": "Oblivion Wing",
+  "type": "FLYING",
+  "power": 85,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SPIRIT_SHACKLE": {
+  "ko": "그림자꿰매기",
+  "en": "Spirit Shackle",
+  "type": "GHOST",
+  "power": 70,
+  "energy": -33,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "DARKEST_LARIAT": {
+  "ko": "DD래리어트",
+  "en": "Darkest Lariat",
+  "type": "DARK",
+  "power": 80,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "BEAK_BLAST": {
+  "ko": "부리캐논",
+  "en": "Beak Blast",
+  "type": "FLYING",
+  "power": 125,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "CLANGING_SCALES": {
+  "ko": "스케일노이즈",
+  "en": "Clanging Scales",
+  "type": "DRAGON",
+  "power": 120,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "NATURES_MADNESS": {
+  "ko": "자연의분노",
+  "en": "Nature’s Madness",
+  "type": "FAIRY",
+  "power": 90,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "MIND_BLOWN": {
+  "ko": "깜짝헤드",
+  "en": "Mind Blown",
+  "type": "FIRE",
+  "power": 130,
+  "energy": -33,
+  "duration": 4000,
+  "kind": "charged"
+ },
+ "PLASMA_FISTS": {
+  "ko": "플라스마피스트",
+  "en": "Plasma Fists",
+  "type": "ELECTRIC",
+  "power": 135,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "DOUBLE_IRON_BASH": {
+  "ko": "더블펀처",
+  "en": "Double Iron Bash",
+  "type": "STEEL",
+  "power": 70,
+  "energy": -33,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "DRUM_BEATING": {
+  "ko": "드럼어택",
+  "en": "Drum Beating",
+  "type": "GRASS",
+  "power": 115,
+  "energy": -33,
+  "duration": 4500,
+  "kind": "charged"
+ },
+ "PYROBALL": {
+  "ko": "화염볼",
+  "en": "Pyro Ball",
+  "type": "FIRE",
+  "power": 150,
+  "energy": -100,
+  "duration": 2000,
+  "kind": "charged"
+ },
+ "SNIPE_SHOT": {
+  "ko": "노려맞히기",
+  "en": "Snipe Shot",
+  "type": "WATER",
+  "power": 100,
+  "energy": -33,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "DIVE": {
+  "ko": "다이빙",
+  "en": "Dive",
+  "type": "WATER",
+  "power": 70,
+  "energy": -33,
+  "duration": 3300,
+  "kind": "charged"
+ },
+ "OBSTRUCT": {
+  "ko": "블로킹",
+  "en": "Obstruct",
+  "type": "DARK",
+  "power": 20,
+  "energy": -33,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "AURA_WHEEL_ELECTRIC": {
+  "ko": "오라휠",
+  "en": "Aura Wheel",
+  "type": "ELECTRIC",
+  "power": 100,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "AURA_WHEEL_DARK": {
+  "ko": "오라휠",
+  "en": "Aura Wheel",
+  "type": "DARK",
+  "power": 100,
+  "energy": -50,
+  "duration": 2500,
+  "kind": "charged"
+ },
+ "DYNAMAX_CANNON": {
+  "ko": "다이맥스포",
+  "en": "Dynamax Cannon",
+  "type": "DRAGON",
+  "power": 215,
+  "energy": -100,
+  "duration": 1500,
+  "kind": "charged"
+ },
+ "THUNDER_CAGE": {
+  "ko": "썬더프리즌",
+  "en": "Thunder Cage",
+  "type": "ELECTRIC",
+  "power": 220,
+  "energy": -100,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "DRAGON_ENERGY": {
+  "ko": "드래곤에너지",
+  "en": "Dragon Energy",
+  "type": "DRAGON",
+  "power": 155,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "FLOWER_TRICK": {
+  "ko": "트릭플라워",
+  "en": "Flower Trick",
+  "type": "GRASS",
+  "power": 75,
+  "energy": -33,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "TORCH_SONG": {
+  "ko": "플레어송",
+  "en": "Torch Song",
+  "type": "FIRE",
+  "power": 100,
+  "energy": -50,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "AQUA_STEP": {
+  "ko": "아쿠아스텝",
+  "en": "Aqua Step",
+  "type": "WATER",
+  "power": 55,
+  "energy": -33,
+  "duration": 3500,
+  "kind": "charged"
+ },
+ "GIGATON_HAMMER": {
+  "ko": "거대해머",
+  "en": "Gigaton Hammer",
+  "type": "STEEL",
+  "power": 300,
+  "energy": -100,
+  "duration": 3000,
+  "kind": "charged"
+ },
+ "GLAIVE_RUSH": {
+  "ko": "대검돌격",
+  "en": "Glaive Rush",
+  "type": "DRAGON",
+  "power": 105,
+  "energy": -50,
+  "duration": 2000,
+  "kind": "charged"
+ }
+}

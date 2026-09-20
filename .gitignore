@@ -1,0 +1,5 @@
+node_modules/
+raw/
+.omc/
+.DS_Store
+Thumbs.db

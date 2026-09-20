@@ -1,0 +1,772 @@
+<title>로켓단 대응기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap">
+
+<style>
+:root{
+  --ground:#F5F4F2; --surface:#FFFFFF; --surface-2:#EFEEEB;
+  --ink:#171922; --ink-2:#4A4E5C; --muted:#787D8E;
+  --line:#E0DFDB; --line-2:#CFCEC9;
+  --accent:#C8102E; --accent-ink:#FFFFFF; --accent-soft:#FBEAEC;
+  --good:#12805C; --ok:#8A6A10; --bad:#A33340;
+  --bar:#F8E5E9;
+  --shadow:0 1px 2px rgba(23,25,34,.06), 0 8px 24px -16px rgba(23,25,34,.28);
+  --r:10px;
+  --f-display:"Black Han Sans","IBM Plex Sans KR",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans KR",system-ui,-apple-system,"Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --ground:#12141B; --surface:#1A1D26; --surface-2:#232733;
+  --ink:#E9EBF1; --ink-2:#B4B9C8; --muted:#868C9E;
+  --line:#2A2E3B; --line-2:#3A4052;
+  --accent:#FF5470; --accent-ink:#1A0308; --accent-soft:#2A1720;
+  --good:#3FCF9B; --ok:#E0A93C; --bad:#FF7A8A;
+  --bar:#2E1D25;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+}}
+:root[data-theme="dark"]{
+  --ground:#12141B; --surface:#1A1D26; --surface-2:#232733;
+  --ink:#E9EBF1; --ink-2:#B4B9C8; --muted:#868C9E;
+  --line:#2A2E3B; --line-2:#3A4052;
+  --accent:#FF5470; --accent-ink:#1A0308; --accent-soft:#2A1720;
+  --good:#3FCF9B; --ok:#E0A93C; --bad:#FF7A8A;
+  --bar:#2E1D25;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:15px; line-height:1.55; -webkit-text-size-adjust:100%}
+.wrap{max-width:920px; margin:0 auto; padding-inline:16px; padding-block:0 56px}
+button,input,textarea,select{font:inherit; color:inherit}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+
+/* header */
+.top{position:sticky; top:env(safe-area-inset-top,0px); z-index:20;
+  background:color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+.top-in{max-width:920px; margin:0 auto; padding:9px 16px; display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+.mark{display:flex; align-items:baseline; gap:8px; margin-right:auto}
+.mark .r{font-family:var(--f-display); font-size:21px; line-height:1;
+  color:var(--accent-ink); background:var(--accent); width:29px; height:29px;
+  display:grid; place-items:center; border-radius:6px; transform:skewX(-8deg)}
+.mark h1{font-family:var(--f-display); font-size:18px; font-weight:400; margin:0; letter-spacing:-.01em}
+.tabs{display:flex; flex-wrap:wrap; gap:3px; background:var(--surface-2); padding:3px; border-radius:8px}
+.tabs button{border:0; background:transparent; color:var(--ink-2); font-size:13px; font-weight:600;
+  padding:6px 11px; border-radius:6px; cursor:pointer; white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
+
+.eyebrow{font-size:11px; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); margin:0 0 8px; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+section{margin-top:22px}
+.hint{color:var(--muted); font-size:13px; margin:6px 0 0}
+
+/* dialogue search */
+.qf input{width:100%; padding:12px 14px; border-radius:var(--r);
+  border:1px solid var(--line-2); background:var(--surface)}
+.qhits{list-style:none; margin:8px 0 0; padding:0; display:flex; flex-direction:column; gap:6px}
+.qhits button{width:100%; text-align:left; display:flex; align-items:center; gap:10px;
+  background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:9px 11px; cursor:pointer}
+.qhits .q{flex:1; font-size:14px}
+
+/* type grid */
+.type-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:7px}
+@media(min-width:520px){.type-grid{grid-template-columns:repeat(6,1fr)}}
+.type-tile{--c:#888; border:1px solid transparent; border-radius:8px; cursor:pointer;
+  background:var(--c); color:#fff; font-weight:600; font-size:13.5px; padding:11px 4px;
+  text-align:center; box-shadow:inset 0 -2px 0 rgba(0,0,0,.18)}
+.type-tile[aria-pressed="true"]{outline:3px solid var(--ink); outline-offset:2px}
+
+/* leader picker */
+.who-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:8px}
+@media(min-width:560px){.who-grid{grid-template-columns:repeat(4,1fr)}}
+.who-btn{background:var(--surface); border:1px solid var(--line-2); border-radius:var(--r);
+  padding:12px 10px; cursor:pointer; text-align:center; font-weight:600}
+.who-btn[aria-pressed="true"]{border-color:var(--accent); background:var(--accent-soft); color:var(--accent)}
+.who-btn small{display:block; font-weight:400; font-size:11px; color:var(--muted); margin-top:2px}
+.who-btn[aria-pressed="true"] small{color:var(--accent)}
+
+/* verdict */
+.verdict{--c:#888; border-radius:var(--r); overflow:hidden; border:1px solid var(--line);
+  background:var(--surface); box-shadow:var(--shadow)}
+.verdict-head{background:var(--c); color:#fff; padding:12px 15px;
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+.verdict-head .big{font-family:var(--f-display); font-size:24px; font-weight:400; line-height:1.1}
+.verdict-head .said{font-size:13.5px; opacity:.92; font-style:italic}
+.verdict-body{padding:12px 15px; display:flex; gap:20px; flex-wrap:wrap}
+.vcol{min-width:150px}
+.vcol h4{margin:0 0 6px; font-size:11px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); font-weight:600}
+.chips{display:flex; flex-wrap:wrap; gap:5px}
+
+.tb{--c:#888; background:var(--c); color:#fff; font-size:11px; font-weight:600;
+  padding:2px 7px; border-radius:99px; white-space:nowrap; line-height:1.6}
+.tb.x{box-shadow:inset 0 0 0 99px rgba(255,255,255,.72); color:var(--ink-2)}
+
+/* lineup display */
+.lineup{display:grid; gap:1px; background:var(--line); border:1px solid var(--line);
+  border-radius:var(--r); overflow:hidden}
+.lslot{background:var(--surface); padding:10px 12px; display:flex; gap:11px; align-items:flex-start}
+.lno{font-family:var(--f-mono); font-size:11px; font-weight:600; color:var(--accent-ink);
+  background:var(--accent); width:19px; height:19px; border-radius:5px; display:grid;
+  place-items:center; flex:none; margin-top:2px}
+.lmons{display:flex; flex-wrap:wrap; gap:5px}
+.mon{background:var(--surface-2); border-radius:6px; padding:3px 8px; font-size:13.5px; font-weight:500}
+.mon.enc{background:var(--accent-soft); color:var(--accent)}
+.mon.enc::after{content:" ★"; font-size:10px}
+
+/* result rows */
+.rows{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1px;
+  background:var(--line); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+.row{position:relative; background:var(--surface); display:flex; align-items:center; gap:12px; padding:10px 12px}
+.row .fill{position:absolute; inset:0 auto 0 0; width:var(--p,0%); background:var(--bar); z-index:0}
+.row>*{position:relative; z-index:1}
+.rank{font-family:var(--f-mono); font-size:12px; font-weight:600; color:var(--muted);
+  width:20px; text-align:right; flex:none; font-variant-numeric:tabular-nums}
+.row:nth-child(-n+3) .rank{color:var(--accent)}
+.who{flex:1; min-width:0}
+.who .nm{font-weight:600; font-size:15px; display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+.who .mv{font-size:12.5px; color:var(--muted); margin-top:2px; overflow:hidden;
+  text-overflow:ellipsis; white-space:nowrap}
+.flag{font-size:10px; font-weight:700; letter-spacing:.04em; padding:1px 5px; border-radius:4px;
+  background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line-2)}
+.flag.own{background:var(--accent-soft); color:var(--accent); border-color:transparent}
+.inst{display:flex; align-items:center; gap:14px; flex:none}
+.stat{text-align:right; line-height:1.2}
+.stat b{font-family:var(--f-mono); font-size:14px; font-weight:600;
+  font-variant-numeric:tabular-nums; display:block}
+.stat span{font-size:10px; color:var(--muted); letter-spacing:.04em}
+.pill{font-size:11px; font-weight:600; padding:3px 8px; border-radius:99px;
+  white-space:nowrap; border:1px solid currentColor}
+.pill.g{color:var(--good)} .pill.o{color:var(--ok)} .pill.b{color:var(--bad)}
+@media(max-width:480px){
+  .row{flex-wrap:wrap}
+  .inst{width:100%; justify-content:flex-start; padding-left:32px; gap:16px}
+  .stat{text-align:left}
+}
+
+/* team */
+.team{display:grid; gap:10px; grid-template-columns:1fr}
+@media(min-width:560px){.team{grid-template-columns:repeat(3,1fr)}}
+.tm{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  padding:12px; border-top:3px solid var(--accent)}
+.tm .n{font-weight:700; font-size:16px}
+.tm .m{font-size:12.5px; color:var(--muted); margin-top:3px}
+
+/* manual slots */
+.slots{display:grid; gap:12px; grid-template-columns:1fr}
+@media(min-width:640px){.slots{grid-template-columns:repeat(3,1fr)}}
+.slot{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:12px}
+.slot h3{margin:0 0 9px; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--muted); font-weight:600}
+.combo{position:relative}
+.combo input{width:100%; padding:9px 11px; border:1px solid var(--line-2); border-radius:8px; background:var(--ground)}
+.combo ul{list-style:none; margin:4px 0 0; padding:4px; position:absolute; left:0; right:0; z-index:15;
+  background:var(--surface); border:1px solid var(--line-2); border-radius:8px;
+  box-shadow:var(--shadow); max-height:230px; overflow-y:auto}
+.combo li button{width:100%; text-align:left; background:none; border:0; padding:7px 9px;
+  border-radius:6px; cursor:pointer; font-size:14px}
+.combo li button:hover,.combo li button:focus{background:var(--surface-2)}
+.picked{list-style:none; margin:9px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:6px}
+.picked li{display:flex; align-items:center; gap:6px; background:var(--surface-2);
+  border-radius:99px; padding:3px 5px 3px 10px; font-size:13px; font-weight:500}
+.picked button{border:0; background:none; cursor:pointer; color:var(--muted);
+  font-size:15px; line-height:1; padding:2px 4px}
+
+/* controls */
+.btn{border:1px solid var(--line-2); background:var(--surface); color:var(--ink);
+  border-radius:8px; padding:9px 15px; font-size:14px; font-weight:600; cursor:pointer}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.btn.sm{padding:5px 10px; font-size:12.5px}
+.bar-row{display:flex; gap:9px; flex-wrap:wrap; align-items:center; margin-top:12px}
+.switch{display:flex; align-items:center; gap:7px; font-size:13.5px; cursor:pointer; font-weight:500}
+.switch input{accent-color:var(--accent); width:16px; height:16px}
+.switch.off{opacity:.45; cursor:not-allowed}
+
+details.opts{margin-top:14px; border:1px solid var(--line); border-radius:var(--r); background:var(--surface)}
+details.opts>summary{cursor:pointer; padding:11px 14px; font-weight:600; font-size:14px; list-style:none}
+details.opts>summary::-webkit-details-marker{display:none}
+details.opts>summary::before{content:"⚙  "; color:var(--muted)}
+.opts-in{padding:0 14px 14px; display:grid; gap:18px}
+.field label.lbl{display:block; font-size:12px; color:var(--muted); font-weight:600; margin-bottom:6px}
+.field input[type=range]{width:100%; accent-color:var(--accent)}
+
+/* roster */
+.roster-search{width:100%; padding:9px 11px; border:1px solid var(--line-2);
+  border-radius:8px; background:var(--ground)}
+.roster-hits{list-style:none; margin:8px 0 0; padding:0; display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:4px;
+  max-height:220px; overflow-y:auto}
+.roster-hits label{display:flex; align-items:center; gap:7px; padding:5px 7px;
+  border-radius:6px; font-size:13.5px; cursor:pointer}
+.roster-hits label:hover{background:var(--surface-2)}
+.roster-hits input{accent-color:var(--accent); flex:none}
+.owned{list-style:none; margin:10px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:5px}
+.owned li{display:flex; align-items:center; gap:5px; background:var(--accent-soft); color:var(--accent);
+  border-radius:99px; padding:2px 5px 2px 9px; font-size:12.5px; font-weight:600}
+.owned button{border:0; background:none; cursor:pointer; color:inherit; font-size:14px; line-height:1; padding:1px 3px}
+
+/* 내 대응표 */
+.sheet{display:grid; gap:1px; background:var(--line); border:1px solid var(--line);
+  border-radius:var(--r); overflow:hidden}
+.sh{background:var(--surface); padding:9px 12px; display:flex; gap:11px; align-items:center}
+.sh .lab{flex:none; width:74px; display:flex; align-items:center}
+.sh .picks{flex:1; min-width:0; display:flex; flex-wrap:wrap; gap:4px 12px}
+.sh .p1{font-weight:700}
+.sh .pk{font-size:13.5px; white-space:nowrap}
+.sh .pk i{font-style:normal; font-family:var(--f-mono); font-size:11px; color:var(--muted); margin-left:4px}
+.sh.boss .lab{width:74px; font-weight:700; font-size:13.5px}
+.sh .none{color:var(--muted); font-size:13px}
+.empty{background:var(--surface); border:1px dashed var(--line-2); border-radius:var(--r);
+  padding:22px 16px; text-align:center; color:var(--muted); font-size:14px}
+
+.note{font-size:12.5px; color:var(--muted); line-height:1.6; margin-top:26px;
+  border-top:1px solid var(--line); padding-top:14px}
+.note b{color:var(--ink-2)}
+.busy{color:var(--muted); font-size:14px; padding:18px 4px}
+.stale{font-size:11px; color:var(--muted); font-weight:500}
+</style>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark"><span class="r">R</span><h1>로켓단 대응기</h1></div>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-grunt" aria-selected="true">조무래기</button>
+      <button role="tab" id="tab-leader" aria-selected="false">리더·보스</button>
+      <button role="tab" id="tab-manual" aria-selected="false">직접입력</button>
+      <button role="tab" id="tab-mine" aria-selected="false">내 포켓몬</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ===== 조무래기 ===== -->
+  <div id="view-grunt">
+    <section>
+      <p class="eyebrow">1 · 대사로 타입 판별</p>
+      <div class="qf"><input id="q" type="search" placeholder="들은 대사를 입력 — 예: 이 바다는 위험해" autocomplete="off"></div>
+      <ul class="qhits" id="qhits"></ul>
+      <p class="hint">대사가 기억 안 나면 아래에서 타입을 직접 고르세요.</p>
+      <div class="type-grid" id="typegrid" style="margin-top:10px"></div>
+    </section>
+    <section id="g-verdict"></section>
+    <section id="g-lineup"></section>
+    <section id="g-out"></section>
+  </div>
+
+  <!-- ===== 리더·보스 ===== -->
+  <div id="view-leader" hidden>
+    <section>
+      <p class="eyebrow">상대 선택</p>
+      <div class="who-grid" id="whogrid"></div>
+    </section>
+    <section id="l-lineup"></section>
+    <section id="l-out"></section>
+  </div>
+
+  <!-- ===== 직접입력 ===== -->
+  <div id="view-manual" hidden>
+    <section>
+      <p class="eyebrow">상대 라인업 직접 입력</p>
+      <p class="hint" style="margin:0 0 12px">
+        라인업이 바뀌었거나 목록에 없는 상대를 만났을 때 씁니다.
+        한 슬롯에 여러 후보를 넣으면 그 전부를 감당할 수 있는 카운터를 계산합니다.</p>
+      <div class="slots" id="slots"></div>
+      <div class="bar-row">
+        <button class="btn primary" id="calc">대응 계산</button>
+        <button class="btn" id="clear">비우기</button>
+      </div>
+    </section>
+    <section id="m-out"></section>
+  </div>
+
+  <!-- ===== 내 포켓몬 ===== -->
+  <div id="view-mine" hidden>
+    <section>
+      <p class="eyebrow">보유 포켓몬 등록 — <span id="own-n">0</span>마리</p>
+      <input type="search" class="roster-search" id="rq" placeholder="이름으로 검색해서 체크 — 예: 괴력몬" autocomplete="off">
+      <ul class="roster-hits" id="rhits"></ul>
+      <ul class="owned" id="ownlist"></ul>
+      <div class="bar-row">
+        <button class="btn sm" id="ownclear">전체 해제</button>
+        <span class="hint" style="margin:0">로켓단 대응에 쓰는 주력 30~50마리면 충분합니다. 브라우저에 저장됩니다.</span>
+      </div>
+    </section>
+    <section id="sheet-out"></section>
+  </div>
+
+  <!-- ===== 조건 ===== -->
+  <details class="opts" id="opts">
+    <summary>계산 조건</summary>
+    <div class="opts-in">
+      <div class="field">
+        <label class="lbl" for="mylv">내 포켓몬 레벨 — <span id="mylv-v">40</span></label>
+        <input type="range" id="mylv" min="20" max="50" step="1" value="40">
+        <div class="bar-row" style="margin-top:8px">
+          <label class="switch"><input type="checkbox" id="megaOn" checked> 메가진화 포함</label>
+          <label class="switch"><input type="checkbox" id="legOn" checked> 전설·환상 포함</label>
+        </div>
+
+        <label class="lbl" for="blv" style="margin-top:14px">상대 레벨 — <span id="blv-v">자동</span></label>
+        <input type="range" id="blv" min="5" max="40" step="1" value="8">
+        <div class="bar-row" style="margin-top:6px">
+          <button class="btn sm" id="blvauto">자동으로 되돌리기</button>
+          <span class="hint" style="margin:0">게임에서 본 CP와 처치 시간이 안 맞으면 조정하세요.</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <p class="note" id="note"></p>
+</div>
+
+<script type="application/json" id="db">__DATA__</script>
+
+<script>
+/* ==== 엔진 (src/engine.mjs 에서 주입, export 구문은 번들 시 제거) ==== */
+__ENGINE__
+
+/* ==== 데이터 복원 ==== */
+const packed = JSON.parse(document.getElementById('db').textContent);
+const DB = {
+  types: packed.types, battle: packed.battle, grunts: packed.grunts,
+  moves: Object.fromEntries(Object.entries(packed.moves).map(([k, v]) => [k, {
+    ko: v[0], en: v[1], type: v[2], power: v[3], energy: v[4], duration: v[5], kind: v[6] }])),
+  pokemon: packed.pokemon.map((p) => ({
+    id: p[0], ko: p[1], en: p[2], dex: p[3], atk: p[4], def: p[5], sta: p[6],
+    types: p[7], fast: p[8], charged: p[9], cls: p[10] || null, mega: !!p[11] })),
+};
+const ROCKET = packed.rocket;
+const BY_ID = new Map(DB.pokemon.map((p) => [p.id, p]));
+const TYPE_KO = Object.fromEntries(Object.entries(DB.types.names).map(([k, v]) => [k, v.ko]));
+
+const TYPE_COLOR = {
+  NORMAL:'#9298A4', FIGHTING:'#C4472B', FLYING:'#6E93C8', POISON:'#8B4BA8', GROUND:'#9A6B33',
+  ROCK:'#9C9268', BUG:'#7E9022', GHOST:'#5F4374', STEEL:'#5A8296', FIRE:'#D2452F',
+  WATER:'#2C6FC4', GRASS:'#3C8C39', ELECTRIC:'#D0A013', PSYCHIC:'#CF4370', ICE:'#46A8C4',
+  DRAGON:'#4A57B8', DARK:'#59494C', FAIRY:'#C063B8',
+};
+
+const el = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]));
+const tb = (t, cls = '') => `<span class="tb ${cls}" style="--c:${TYPE_COLOR[t]}">${TYPE_KO[t]}</span>`;
+
+/* ==== 상태 ==== */
+const S = {
+  mode: 'grunt',
+  type: 'WATER',
+  leader: 'giovanni',
+  slots: [[], [], []],
+  myLevel: 40, mega: true, legendary: true,
+  bossLevel: null,          // null = 모드별 자동 (조무래기 8 / 리더·보스 24)
+  owned: new Set(), onlyOwned: false, everOwned: false,
+};
+
+/** 실제로 쓸 상대 레벨. 사용자가 직접 정했으면 그 값이 모든 모드에 우선한다. */
+function bossLevel(fallback) { return S.bossLevel ?? fallback; }
+
+function opts(extra = {}) {
+  return {
+    myLevel: S.myLevel,
+    allowMega: S.mega,
+    allowLegendary: S.legendary,
+    onlyIds: S.onlyOwned && S.owned.size ? [...S.owned] : null,
+    bossShadow: true,
+    ...extra,
+  };
+}
+
+/* ==== 공통 렌더 ==== */
+function verdictPill(m) {
+  // 약한 상대에선 여유가 ×60 같은 값까지 뛴다. 그 이상은 구분이 무의미하므로 잘라 보여준다.
+  if (m >= 10) return '<span class="pill g">압도 ×10↑</span>';
+  if (m >= 2.5) return `<span class="pill g">압도 ×${m.toFixed(1)}</span>`;
+  if (m >= 1.3) return `<span class="pill g">우세 ×${m.toFixed(1)}</span>`;
+  if (m >= 0.9) return `<span class="pill o">접전 ×${m.toFixed(1)}</span>`;
+  return `<span class="pill b">불리 ×${m.toFixed(1)}</span>`;
+}
+
+function rows(list) {
+  if (!list.length) {
+    return `<p class="busy">${S.onlyOwned
+      ? '등록한 보유 포켓몬 중에는 후보가 없습니다. 「보유한 것만」을 끄거나 더 등록하세요.'
+      : '조건에 맞는 포켓몬이 없습니다.'}</p>`;
+  }
+  const top = list[0].score || 1;
+  return '<ul class="rows">' + list.map((r, i) => `
+    <li class="row">
+      <span class="fill" style="--p:${(r.score / top * 100).toFixed(1)}%"></span>
+      <span class="rank">${i + 1}</span>
+      <div class="who">
+        <div class="nm">${esc(r.ko)}
+          ${r.mega ? '<span class="flag">메가</span>' : ''}
+          ${S.owned.has(r.id) ? '<span class="flag own">보유</span>' : ''}
+          ${r.types.map((t) => tb(t)).join('')}
+        </div>
+        <div class="mv">${esc(r.fastKo)} + ${esc(r.chargedKo)}</div>
+      </div>
+      <div class="inst">
+        <div class="stat"><b>${r.dps.toFixed(1)}</b><span>DPS</span></div>
+        <div class="stat"><b>${r.ttk.toFixed(1)}s</b><span>처치</span></div>
+        ${verdictPill(r.worstMargin ?? r.margin)}
+      </div>
+    </li>`).join('') + '</ul>';
+}
+
+function ownToggle() {
+  const off = S.owned.size ? '' : ' off';
+  return `<label class="switch${off}" style="margin-left:auto">
+    <input type="checkbox" id="onlyOwned" ${S.onlyOwned ? 'checked' : ''} ${S.owned.size ? '' : 'disabled'}>
+    보유한 것만${S.owned.size ? '' : ' (등록 필요)'}</label>`;
+}
+
+function lineupView(party) {
+  return `
+    <p class="eyebrow">실제 출현 포켓몬
+      <span class="stale">· ${esc(ROCKET.asOf)} 기준 · ★ 승리 시 포획</span></p>
+    <div class="lineup">${party.slots.map((slot, i) => `
+      <div class="lslot">
+        <span class="lno">${i + 1}</span>
+        <div class="lmons">${slot.length
+          ? slot.map((m) => `<span class="mon${m.enc ? ' enc' : ''}">${esc(BY_ID.get(m.id)?.ko ?? m.id)}</span>`).join('')
+          : '<span class="mon">정보 없음</span>'}</div>
+      </div>`).join('')}</div>`;
+}
+
+/** 라인업 하나에 대한 전체 결과(추천 3마리 + 슬롯별 순위)를 그린다. */
+function renderResults(target, party, autoLevel) {
+  const lineup = party.slots.filter((s) => s.length).map((s) => s.map((m) => m.id));
+  if (!lineup.length) { target.innerHTML = '<p class="busy">라인업 정보가 없습니다.</p>'; return; }
+  target.innerHTML = '<p class="busy">계산 중…</p>';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const { slots, team } = rankForLineup(lineup, DB, opts({ bossLevel: bossLevel(autoLevel), limit: 12 }));
+    let html = `<p class="eyebrow">추천 대응 ${ownToggle()}</p>`;
+    if (team?.members?.length) {
+      html += `<div class="team">` + team.members.map((m) => `
+        <div class="tm">
+          <div class="n">${esc(m.ko)}${S.owned.has(m.id) ? ' <span class="flag own">보유</span>' : ''}</div>
+          <div class="m">${esc(m.fastKo)} + ${esc(m.chargedKo)}</div>
+          <div class="m">${m.types.map((t) => tb(t)).join(' ')}</div>
+        </div>`).join('') + '</div>';
+    }
+    html += slots.map((s) => `
+      <section>
+        <p class="eyebrow">슬롯 ${s.slot} — ${s.defenders.map((d) => esc(d.ko)).join(' / ')}</p>
+        ${rows(s.ranked)}
+      </section>`).join('');
+    target.innerHTML = html;
+  }));
+}
+
+/* ==== 조무래기 ==== */
+const gruntParty = (type) => ROCKET.parties.find((p) => p.kind === 'grunt' && p.type === type);
+
+function renderTypeGrid() {
+  el('typegrid').innerHTML = DB.types.order.map((t) => `
+    <button class="type-tile" data-t="${t}" style="--c:${TYPE_COLOR[t]}"
+            aria-pressed="${t === S.type}">${TYPE_KO[t]}</button>`).join('');
+}
+
+function renderGruntVerdict() {
+  const g = DB.grunts.find((x) => x.type === S.type);
+  const weak = [], resist = [];
+  for (const a of DB.types.order) {
+    const m = DB.types.matrix[a][S.type];
+    if (m > 1) weak.push(a); else if (m < 1) resist.push(a);
+  }
+  el('g-verdict').innerHTML = `
+    <div class="verdict" style="--c:${TYPE_COLOR[S.type]}">
+      <div class="verdict-head">
+        <span class="big">${TYPE_KO[S.type]} 타입</span>
+        ${g?.quoteKo ? `<span class="said">“${esc(g.quoteKo)}”</span>` : ''}
+      </div>
+      <div class="verdict-body">
+        <div class="vcol"><h4>이 타입에 강한 공격</h4><div class="chips">${weak.map((t) => tb(t)).join('')}</div></div>
+        <div class="vcol"><h4>먹히지 않는 공격</h4><div class="chips">${resist.map((t) => tb(t, 'x')).join('')}</div></div>
+      </div>
+    </div>`;
+}
+
+function runGrunt() {
+  const party = gruntParty(S.type);
+  el('g-lineup').innerHTML = party ? lineupView(party) : '';
+  if (party) renderResults(el('g-out'), party, 8);
+  else {
+    // 라인업 데이터가 없으면 타입 표본으로 대체한다
+    el('g-out').innerHTML = '<p class="busy">계산 중…</p>';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const { ranked } = rankByType(S.type, DB, opts({ bossLevel: bossLevel(8), limit: 18 }));
+      el('g-out').innerHTML = `<p class="eyebrow">추천 대응 (타입 기준) ${ownToggle()}</p>` + rows(ranked);
+    }));
+  }
+}
+
+function selectType(t) { S.type = t; renderTypeGrid(); renderGruntVerdict(); runGrunt(); save(); }
+
+function renderQuoteHits(term) {
+  const q = term.trim();
+  if (!q) { el('qhits').innerHTML = ''; return; }
+  const hits = DB.grunts.filter((g) =>
+    [g.quoteKo, g.altQuoteKo, TYPE_KO[g.type]].some((s) => s && s.includes(q)));
+  el('qhits').innerHTML = hits.slice(0, 6).map((g) => `
+    <li><button data-t="${g.type}">${tb(g.type)}<span class="q">“${esc(g.quoteKo ?? '')}”</span></button></li>`).join('');
+}
+
+/* ==== 리더·보스 ==== */
+const bosses = () => ROCKET.parties.filter((p) => p.kind === 'boss' || p.kind === 'leader');
+
+function renderWhoGrid() {
+  el('whogrid').innerHTML = bosses().map((p) => `
+    <button class="who-btn" data-leader="${p.key}" aria-pressed="${p.key === S.leader}">
+      ${esc(p.ko)}<small>${p.kind === 'boss' ? '보스' : '리더'}</small></button>`).join('');
+}
+
+function runLeader() {
+  const party = bosses().find((p) => p.key === S.leader);
+  if (!party) return;
+  el('l-lineup').innerHTML = lineupView(party);
+  renderResults(el('l-out'), party, 24);
+}
+
+/* ==== 직접입력 ==== */
+function renderSlots() {
+  el('slots').innerHTML = S.slots.map((picked, i) => `
+    <div class="slot">
+      <h3>슬롯 ${i + 1}</h3>
+      <div class="combo">
+        <input type="search" id="cb${i}" data-slot="${i}" placeholder="포켓몬 이름" autocomplete="off">
+        <ul hidden id="cbl${i}"></ul>
+      </div>
+      <ul class="picked">${picked.map((id) => `
+        <li>${esc(BY_ID.get(id)?.ko ?? id)}<button data-rm="${i}" data-id="${id}" aria-label="제거">×</button></li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+const searchMon = (term, n = 10) => {
+  const q = term.trim().toLowerCase();
+  if (!q) return [];
+  return DB.pokemon.filter((p) => p.fast.length && p.charged.length &&
+    (p.ko.toLowerCase().includes(q) || p.en.toLowerCase().includes(q))).slice(0, n);
+};
+
+function runManual() {
+  const slots = S.slots.filter((s) => s.length);
+  if (!slots.length) { el('m-out').innerHTML = '<p class="busy">슬롯에 포켓몬을 하나 이상 넣어주세요.</p>'; return; }
+  const party = { slots: S.slots.map((s) => s.map((id) => ({ id, enc: false }))) };
+  renderResults(el('m-out'), party, 24);
+}
+
+/* ==== 보유 포켓몬 ==== */
+function renderRoster() {
+  el('own-n').textContent = S.owned.size;
+  el('ownlist').innerHTML = [...S.owned].map((id) => `
+    <li>${esc(BY_ID.get(id)?.ko ?? id)}<button data-own-rm="${id}" aria-label="해제">×</button></li>`).join('');
+  renderRosterHits(el('rq').value);
+}
+
+function renderRosterHits(term) {
+  const hits = searchMon(term, 24);
+  el('rhits').innerHTML = hits.map((p) => `
+    <li><label><input type="checkbox" data-own="${p.id}" ${S.owned.has(p.id) ? 'checked' : ''}>
+      ${esc(p.ko)}${p.mega ? ' <span class="flag">메가</span>' : ''}</label></li>`).join('');
+}
+
+/* ==== 내 대응표 ==== */
+/** 한 상대(파티)에 대해 내 보유 포켓몬만으로 순위를 내고 상위 N마리를 돌려준다. */
+function myBest(party, autoLevel, n = 3) {
+  const defenders = party.slots.flat()
+    .map((m) => BY_ID.get(m.id)).filter(Boolean);
+  if (!defenders.length) return [];
+  const ranked = [];
+  for (const id of S.owned) {
+    const atk = BY_ID.get(id);
+    if (!atk || !atk.fast.length || !atk.charged.length) continue;
+    const r = aggregate(atk, defenders, DB, opts({ bossLevel: bossLevel(autoLevel), onlyIds: null }));
+    if (r) ranked.push(r);
+  }
+  ranked.sort((a, b) => b.score - a.score);
+  return ranked.slice(0, n);
+}
+
+function sheetRow(label, picks, cls = '') {
+  const body = picks.length
+    ? picks.map((r, i) => `<span class="pk${i === 0 ? ' p1' : ''}">${esc(r.ko)}<i>${r.dps.toFixed(0)}</i></span>`).join('')
+    : '<span class="none">해당 없음</span>';
+  return `<div class="sh ${cls}"><div class="lab">${label}</div><div class="picks">${body}</div></div>`;
+}
+
+function renderSheet() {
+  const out = el('sheet-out');
+  if (!S.owned.size) {
+    out.innerHTML = `<p class="eyebrow">내 대응표</p>
+      <div class="empty">보유 포켓몬을 등록하면<br>로켓단 상대별로 <b>내 것 중 최적 3마리</b>를 여기에 정리해 드립니다.</div>`;
+    return;
+  }
+  out.innerHTML = '<p class="eyebrow">내 대응표</p><p class="busy">내 포켓몬 ' + S.owned.size + '마리로 전 상대 계산 중…</p>';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const boss = bosses().map((p) => sheetRow(esc(p.ko), myBest(p, 24), 'boss')).join('');
+    const grunt = DB.types.order.map((t) => {
+      const party = gruntParty(t);
+      if (!party) return '';
+      return sheetRow(tb(t), myBest(party, 8));
+    }).join('');
+    out.innerHTML = `
+      <p class="eyebrow">내 대응표 <span class="stale">· 숫자는 DPS · 굵은 쪽이 1순위</span></p>
+      <p class="eyebrow" style="margin-top:16px">리더 · 보스</p>
+      <div class="sheet">${boss}</div>
+      <p class="eyebrow" style="margin-top:16px">조무래기 (타입별)</p>
+      <div class="sheet">${grunt}</div>`;
+  }));
+}
+
+/* ==== 저장 ==== */
+function save() {
+  try {
+    localStorage.setItem('rocket-cfg', JSON.stringify({
+      myLevel: S.myLevel, mega: S.mega, legendary: S.legendary, bossLevel: S.bossLevel,
+      owned: [...S.owned], onlyOwned: S.onlyOwned, everOwned: S.everOwned,
+      slots: S.slots, type: S.type, leader: S.leader, mode: S.mode,
+    }));
+  } catch {}
+}
+function load() {
+  try {
+    const v = JSON.parse(localStorage.getItem('rocket-cfg') || '{}');
+    if (typeof v.myLevel === 'number') S.myLevel = v.myLevel;
+    if (typeof v.mega === 'boolean') S.mega = v.mega;
+    if (typeof v.legendary === 'boolean') S.legendary = v.legendary;
+    if (typeof v.onlyOwned === 'boolean') S.onlyOwned = v.onlyOwned;
+    if (typeof v.bossLevel === 'number' || v.bossLevel === null) S.bossLevel = v.bossLevel;
+    if (Array.isArray(v.owned)) S.owned = new Set(v.owned.filter((id) => BY_ID.has(id)));
+    if (typeof v.everOwned === 'boolean') S.everOwned = v.everOwned;
+    if (Array.isArray(v.slots) && v.slots.length === 3) S.slots = v.slots;
+    if (v.type && TYPE_KO[v.type]) S.type = v.type;
+    if (v.leader) S.leader = v.leader;
+    if (v.mode) S.mode = v.mode;
+  } catch {}
+  if (!S.owned.size) S.onlyOwned = false;
+}
+
+/* ==== 이벤트 ==== */
+document.addEventListener('click', (e) => {
+  const t = e.target.closest('[data-t]');
+  if (t) { el('q').value = ''; el('qhits').innerHTML = ''; selectType(t.dataset.t); return; }
+
+  const L = e.target.closest('[data-leader]');
+  if (L) { S.leader = L.dataset.leader; renderWhoGrid(); runLeader(); save(); return; }
+
+  const rm = e.target.closest('[data-rm]');
+  if (rm) {
+    const i = +rm.dataset.rm;
+    S.slots[i] = S.slots[i].filter((x) => x !== rm.dataset.id);
+    renderSlots(); save(); return;
+  }
+  const add = e.target.closest('[data-add]');
+  if (add) {
+    const i = +add.dataset.slot;
+    if (!S.slots[i].includes(add.dataset.add)) S.slots[i].push(add.dataset.add);
+    renderSlots(); save(); return;
+  }
+  const orm = e.target.closest('[data-own-rm]');
+  if (orm) { S.owned.delete(orm.dataset.ownRm); afterRosterChange(); return; }
+
+  if (!e.target.closest('.combo')) document.querySelectorAll('.combo ul').forEach((u) => { u.hidden = true; });
+});
+
+document.addEventListener('change', (e) => {
+  if (e.target.dataset.own) {
+    e.target.checked ? S.owned.add(e.target.dataset.own) : S.owned.delete(e.target.dataset.own);
+    afterRosterChange(); return;
+  }
+  if (e.target.id === 'onlyOwned') { S.onlyOwned = e.target.checked; save(); rerun(); }
+});
+
+document.addEventListener('input', (e) => {
+  if (e.target.id === 'q') { renderQuoteHits(e.target.value); return; }
+  if (e.target.id === 'rq') { renderRosterHits(e.target.value); return; }
+  if (e.target.dataset.slot !== undefined && e.target.tagName === 'INPUT') {
+    const i = +e.target.dataset.slot;
+    const list = el('cbl' + i);
+    const hits = searchMon(e.target.value);
+    list.innerHTML = hits.map((p) => `
+      <li><button data-add="${p.id}" data-slot="${i}">${esc(p.ko)}
+        <span style="color:var(--muted); font-size:12px"> ${esc(p.en)}</span></button></li>`).join('');
+    list.hidden = !hits.length;
+  }
+});
+
+function afterRosterChange() {
+  // 처음 등록하는 순간 「보유한 것만」을 켜준다 — 등록해놓고 꺼져 있으면 등록한 의미가 없다
+  if (S.owned.size && !S.everOwned) { S.onlyOwned = true; S.everOwned = true; }
+  if (!S.owned.size) S.onlyOwned = false;
+  renderRoster(); save();
+  if (S.mode === 'mine') renderSheet(); else rerun();
+}
+
+const TABS = [['tab-grunt','grunt'], ['tab-leader','leader'], ['tab-manual','manual'], ['tab-mine','mine']];
+for (const [id, m] of TABS) {
+  el(id).onclick = () => setMode(m);
+}
+function setMode(m) {
+  S.mode = m;
+  for (const [id, k] of TABS) el(id).setAttribute('aria-selected', m === k);
+  el('view-grunt').hidden = m !== 'grunt';
+  el('view-leader').hidden = m !== 'leader';
+  el('view-manual').hidden = m !== 'manual';
+  el('view-mine').hidden = m !== 'mine';
+  save(); paintBossLevel();
+  if (m === 'grunt') runGrunt();
+  if (m === 'leader') runLeader();
+  if (m === 'mine') renderSheet();
+}
+
+el('calc').onclick = runManual;
+el('clear').onclick = () => { S.slots = [[], [], []]; renderSlots(); el('m-out').innerHTML = ''; save(); };
+el('ownclear').onclick = () => { S.owned.clear(); afterRosterChange(); };
+
+el('mylv').oninput = (e) => { S.myLevel = +e.target.value; el('mylv-v').textContent = e.target.value; };
+el('mylv').onchange = () => { save(); rerun(); };
+el('blv').oninput = (e) => { S.bossLevel = +e.target.value; paintBossLevel(); };
+el('blv').onchange = () => { save(); rerun(); };
+el('blvauto').onclick = () => { S.bossLevel = null; paintBossLevel(); save(); rerun(); };
+
+function paintBossLevel() {
+  const auto = S.mode === 'grunt' ? 8 : 24;
+  el('blv').value = S.bossLevel ?? auto;
+  el('blv-v').textContent = S.bossLevel === null
+    ? `자동 (${S.mode === 'grunt' ? '조무래기 8' : '리더·보스 24'})`
+    : `Lv ${S.bossLevel} (직접 지정)`;
+}
+
+el('megaOn').onchange = (e) => { S.mega = e.target.checked; save(); rerun(); };
+el('legOn').onchange = (e) => { S.legendary = e.target.checked; save(); rerun(); };
+
+function rerun() {
+  if (S.mode === 'mine') return renderSheet();
+  if (S.mode === 'grunt') runGrunt();
+  else if (S.mode === 'leader') runLeader();
+  else if (el('m-out').innerHTML) runManual();
+}
+
+/* ==== 각주 ==== */
+el('note').innerHTML = `
+  <b>계산 근거</b> — 타입 상성·CP 배율·그림자 보정(공격 ×1.2 / 방어 ×0.833)·기술 위력은
+  포켓몬GO 게임마스터 원본 값을 씁니다. DPS는 빠른공격+차징공격 1사이클 기준이며,
+  피격 에너지는 빼고 계산해 실제 DPS는 표시값 이상이 됩니다.
+  <b>여유</b>는 버티는 시간 ÷ 잡는 시간으로, 1을 넘으면 1대1로 이깁니다.
+  상대는 조무래기 Lv8 / 리더·보스 Lv24 그림자로 가정합니다.
+  리더·보스의 실드 2회는 반영하지 않아 실제 처치 시간은 더 걸립니다.
+  <b>라인업</b>은 ${esc(ROCKET.asOf)} 기준이며 로테이션마다 바뀝니다 —
+  다르면 「직접입력」 탭을 쓰세요. 포켓몬 ${DB.pokemon.length}종 · 기술 ${Object.keys(DB.moves).length}개.`;
+
+/* ==== 시작 ==== */
+load();
+el('mylv').value = S.myLevel; el('mylv-v').textContent = S.myLevel;
+el('megaOn').checked = S.mega; el('legOn').checked = S.legendary;
+renderTypeGrid(); renderGruntVerdict(); renderWhoGrid(); renderSlots(); renderRoster(); paintBossLevel();
+setMode(S.mode);
+</script>

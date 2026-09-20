@@ -1,0 +1,1468 @@
+{
+ "asOf": "2026-09-20",
+ "parties": [
+  {
+   "kind": "boss",
+   "key": "giovanni",
+   "ko": "비주기",
+   "en": "Giovanni",
+   "type": null,
+   "slots": [
+    [
+     {
+      "id": "PERSIAN",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "KANGASKHAN",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "RHYPERIOR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "MACHAMP",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "RESHIRAM",
+      "enc": true,
+      "shiny": true
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "leader",
+   "key": "cliff",
+   "ko": "클리프",
+   "en": "Cliff",
+   "type": null,
+   "slots": [
+    [
+     {
+      "id": "AXEW",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "SNORLAX",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GOLURK",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "WEEZING_GALARIAN",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "TYRANITAR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "CAMERUPT",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GALLADE",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "leader",
+   "key": "arlo",
+   "ko": "알로",
+   "en": "Arlo",
+   "type": null,
+   "slots": [
+    [
+     {
+      "id": "TYRUNT",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "STEELIX",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GOLURK",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SLOWBRO",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "ALAKAZAM",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "CHARIZARD",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SCIZOR",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "leader",
+   "key": "sierra",
+   "ko": "시에라",
+   "en": "Sierra",
+   "type": null,
+   "slots": [
+    [
+     {
+      "id": "AMAURA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "BLASTOISE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "FLYGON",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "FERROTHORN",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "MILOTIC",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "HOUNDOOM",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "STEELIX",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt-other",
+   "key": "malegrunt",
+   "ko": "Male Grunt",
+   "en": "Male Grunt",
+   "type": null,
+   "slots": [
+    [
+     {
+      "id": "BULBASAUR",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "CHARMANDER",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "SQUIRTLE",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "IVYSAUR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "CHARMELEON",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "WARTORTLE",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "VENUSAUR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "CHARIZARD",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "BLASTOISE",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt-other",
+   "key": "femalegrunt",
+   "ko": "Female Grunt",
+   "en": "Female Grunt",
+   "type": null,
+   "slots": [
+    [
+     {
+      "id": "SNORLAX",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "LAPRAS",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "POLIWRATH",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GARDEVOIR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SNORLAX",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "GYARADOS",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "DRAGONITE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SNORLAX",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt-other",
+   "key": "decoyfemalegrunt",
+   "ko": "Decoy Female Grunt",
+   "en": "Decoy Female Grunt",
+   "type": null,
+   "slots": [
+    [
+     {
+      "id": "BELLSPROUT",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "RATICATE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "WEEPINBELL",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "RATICATE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SNORLAX",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-normal",
+   "ko": "노말 타입 조무래기",
+   "en": "NORMAL Grunt",
+   "type": "NORMAL",
+   "quoteKo": "노말이 약하다고 생각해?",
+   "slots": [
+    [
+     {
+      "id": "TEDDIURSA",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "HOOTHOOT",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "PORYGON",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "LOUDRED",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "STUFFUL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "STARLY",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "URSARING",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SWELLOW",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "KANGASKHAN",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-fire",
+   "ko": "불꽃 타입 조무래기",
+   "en": "FIRE Grunt",
+   "type": "FIRE",
+   "quoteKo": "포켓몬이 뱉어내는 불의 온도가 몇 도인지 알아?",
+   "slots": [
+    [
+     {
+      "id": "LITWICK",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "PONYTA",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "TORCHIC",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "MAGMAR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "BLAZIKEN",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "CAMERUPT",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "DARMANITAN",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "DELPHOX",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "MAGMORTAR",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-water",
+   "ko": "물 타입 조무래기",
+   "en": "WATER Grunt",
+   "type": "WATER",
+   "quoteKo": "이 바다는 위험해!",
+   "slots": [
+    [
+     {
+      "id": "MUDKIP",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "TENTACOOL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "KRABBY",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "MAGIKARP",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "FEEBAS",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "DEWPIDER",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SWAMPERT",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SHARPEDO",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "MAGIKARP",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "WALREIN",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GRENINJA",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "TENTACRUEL",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "MAGIKARP",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GYARADOS",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-electric",
+   "ko": "전기 타입 조무래기",
+   "en": "ELECTRIC Grunt",
+   "type": "ELECTRIC",
+   "quoteKo": "짜릿하게 만들어주지!",
+   "slots": [
+    [
+     {
+      "id": "VOLTORB",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "SHINX",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "HELIOPTILE",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "ELECTABUZZ",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "VOLTORB",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "GEODUDE_ALOLA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "LUXRAY",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "AMPHAROS",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GALVANTULA",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-grass",
+   "ko": "풀 타입 조무래기",
+   "en": "GRASS Grunt",
+   "type": "GRASS",
+   "quoteKo": "우릴 상관 마!",
+   "slots": [
+    [
+     {
+      "id": "PHANTUMP",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "TREECKO",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "TANGELA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "LILEEP",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SCEPTILE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "MORELULL",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "CHESNAUGHT",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "TREVENANT",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "CRADILY",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-ice",
+   "ko": "얼음 타입 조무래기",
+   "en": "ICE Grunt",
+   "type": "ICE",
+   "quoteKo": "널 얼려버리겠다!",
+   "slots": [
+    [
+     {
+      "id": "SEEL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "DELIBIRD",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "SPHEAL",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "SEALEO",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "FROSLASS",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "NINETALES_ALOLA",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "AURORUS",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "FROSLASS",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GLALIE",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-fighting",
+   "ko": "격투 타입 조무래기",
+   "en": "FIGHTING Grunt",
+   "type": "FIGHTING",
+   "quoteKo": "이 단단한 몸은 장식이 아니야!",
+   "slots": [
+    [
+     {
+      "id": "TIMBURR",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "MANKEY",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "MACHOP",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "HITMONTOP",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "HITMONLEE",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "HITMONCHAN",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "CONKELDURR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "ANNIHILAPE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "INFERNAPE",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-poison",
+   "ko": "독 타입 조무래기",
+   "en": "POISON Grunt",
+   "type": "POISON",
+   "quoteKo": "독으로 공격할 준비 완료!",
+   "slots": [
+    [
+     {
+      "id": "ODDISH",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "ZUBAT",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "QWILFISH",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "WEEZING_GALARIAN",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "NIDORINO",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "NIDORINA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "WEEZING",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "TOXICROAK",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "AMOONGUSS",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-ground",
+   "ko": "땅 타입 조무래기",
+   "en": "GROUND Grunt",
+   "type": "GROUND",
+   "quoteKo": "땅에 때려눕혀 주지!",
+   "slots": [
+    [
+     {
+      "id": "RHYHORN",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "GLIGAR",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "TRAPINCH",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "GLIGAR",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "CLAYDOL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "VIBRAVA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "GOLURK",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "HIPPOWDON",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "FLYGON",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-flying",
+   "ko": "비행 타입 조무래기",
+   "en": "FLYING Grunt",
+   "type": "FLYING",
+   "quoteKo": "내 포켓몬이 화려하게 날아오른다!",
+   "slots": [
+    [
+     {
+      "id": "TAILLOW",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "ROOKIDEE",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "SWABLU",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "SCYTHER",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "ZUBAT",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "GLIGAR",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "DRAGONITE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "TOUCANNON",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SWANNA",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-psychic",
+   "ko": "에스퍼 타입 조무래기",
+   "en": "PSYCHIC Grunt",
+   "type": "PSYCHIC",
+   "quoteKo": "보이지 않는 힘을 쓰는 에스퍼를 무섭다고 생각해?",
+   "slots": [
+    [
+     {
+      "id": "WOBBUFFET",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "RALTS",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "DROWZEE",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "DROWZEE",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "DUOSION",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "WOBBUFFET",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "GALLADE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "MALAMAR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "REUNICLUS",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-bug",
+   "ko": "벌레 타입 조무래기",
+   "en": "BUG Grunt",
+   "type": "BUG",
+   "quoteKo": "가랏! 내 벌레 포켓몬!",
+   "slots": [
+    [
+     {
+      "id": "VENONAT",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "WEEDLE",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "GRUBBIN",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "PINSIR",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "ANORITH",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "DEWPIDER",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "SCIZOR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SCOLIPEDE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "VIKAVOLT",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-rock",
+   "ko": "바위 타입 조무래기",
+   "en": "ROCK Grunt",
+   "type": "ROCK",
+   "quoteKo": "렛츠 락앤롤!",
+   "slots": [
+    [
+     {
+      "id": "ONIX",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "KABUTO",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "CRANIDOS",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "SHIELDON",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "GRAVELER",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "CRANIDOS",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "TYRANTRUM",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GOLEM",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "AURORUS",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-ghost",
+   "ko": "고스트 타입 조무래기",
+   "en": "GHOST Grunt",
+   "type": "GHOST",
+   "quoteKo": "흐... 흐... 흐... 흐... 흐흣!",
+   "slots": [
+    [
+     {
+      "id": "DUSKULL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "GASTLY",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "YAMASK",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "DUSCLOPS",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SABLEYE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "COFAGRIGUS",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "GENGAR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "FROSLASS",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "COFAGRIGUS",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-dragon",
+   "ko": "드래곤 타입 조무래기",
+   "en": "DRAGON Grunt",
+   "type": "DRAGON",
+   "quoteKo": "크아아아아! 무섭지!",
+   "slots": [
+    [
+     {
+      "id": "NOIBAT",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "DEINO",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "DRATINI",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "EXEGGUTOR_ALOLA",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "DRAGONAIR",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GABITE",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "DRAGONITE",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GARCHOMP",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SALAMENCE",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-dark",
+   "ko": "악 타입 조무래기",
+   "en": "DARK Grunt",
+   "type": "DARK",
+   "quoteKo": "빛이 있으면 그늘이 있는 법.",
+   "slots": [
+    [
+     {
+      "id": "CARVANHA",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "POOCHYENA",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "RATTATA_ALOLA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "SNEASEL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "HOUNDOUR",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "ABSOL",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "LIEPARD",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "HYDREIGON",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-steel",
+   "ko": "강철 타입 조무래기",
+   "en": "STEEL Grunt",
+   "type": "STEEL",
+   "quoteKo": "철벽 공격이다!",
+   "slots": [
+    [
+     {
+      "id": "SANDSHREW_ALOLA",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "ARON",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "BELDUM",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "LAIRON",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SKARMORY",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "METANG",
+      "enc": false,
+      "shiny": false
+     }
+    ],
+    [
+     {
+      "id": "AGGRON",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "SANDSLASH_ALOLA",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "PROBOPASS",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "grunt",
+   "key": "grunt-fairy",
+   "ko": "페어리 타입 조무래기",
+   "en": "FAIRY Grunt",
+   "type": "FAIRY",
+   "quoteKo": "내 귀여운 포켓몬 어때!",
+   "slots": [
+    [
+     {
+      "id": "RALTS",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "SNUBBULL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "VULPIX_ALOLA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "SNUBBULL",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "WEEZING_GALARIAN",
+      "enc": true,
+      "shiny": true
+     },
+     {
+      "id": "KIRLIA",
+      "enc": true,
+      "shiny": true
+     }
+    ],
+    [
+     {
+      "id": "NINETALES_ALOLA",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "WEEZING_GALARIAN",
+      "enc": false,
+      "shiny": false
+     },
+     {
+      "id": "GRANBULL",
+      "enc": false,
+      "shiny": false
+     }
+    ]
+   ]
+  }
+ ]
+}
