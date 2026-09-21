@@ -233,7 +233,27 @@ export function rankForLineup(lineup, db, opts = {}) {
   // 파티 구성은 잘라내기 전 전체 목록으로 해야 한다.
   // 표시용 상위 N만 넘기면 후보가 전부 메가라 "메가 1마리" 규칙에 걸려 조합이 안 나온다.
   const team = pickTeam(slots);
-  return { slots: slots.map((s) => ({ ...s, ranked: s.ranked.slice(0, limit) })), team };
+  const megaCap = opts.megaCap ?? 3;
+  return { slots: slots.map((s) => ({ ...s, ranked: capMega(s.ranked, limit, megaCap) })), team };
+}
+
+/**
+ * 표시용 목록에서 메가진화(원시회귀 포함)를 상위 cap마리까지만 남긴다.
+ * 한 전투에 메가는 한 마리만 낼 수 있는데 슬롯 목록이 메가로만 채워지면
+ * 실제로 꺼낼 수 있는 비메가 대응을 볼 수가 없다. 빈자리는 다음 비메가로 채운다.
+ */
+export function capMega(ranked, limit, cap = 3) {
+  const picks = [];
+  let megas = 0;
+  for (const r of ranked) {
+    if (r.mega) {
+      if (megas >= cap) continue;
+      megas++;
+    }
+    picks.push(r);
+    if (picks.length === limit) break;
+  }
+  return picks;
 }
 
 /**
