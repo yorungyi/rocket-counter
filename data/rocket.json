@@ -1,5 +1,5 @@
 {
- "asOf": "2026-09-27",
+ "asOf": "2026-10-04",
  "parties": [
   {
    "kind": "boss",
@@ -34,7 +34,7 @@
     ],
     [
      {
-      "id": "RESHIRAM",
+      "id": "ZEKROM",
       "enc": true,
       "shiny": true
      }
@@ -50,7 +50,7 @@
    "slots": [
     [
      {
-      "id": "AXEW",
+      "id": "CUBONE",
       "enc": true,
       "shiny": true
      }
@@ -100,7 +100,7 @@
    "slots": [
     [
      {
-      "id": "TYRUNT",
+      "id": "GRIMER_ALOLA",
       "enc": true,
       "shiny": true
      }
@@ -150,7 +150,7 @@
    "slots": [
     [
      {
-      "id": "AMAURA",
+      "id": "PANCHAM",
       "enc": true,
       "shiny": true
      }
@@ -586,7 +586,7 @@
       "shiny": true
      },
      {
-      "id": "VOLTORB",
+      "id": "MAGNEMITE",
       "enc": true,
       "shiny": true
      },
@@ -630,7 +630,7 @@
       "shiny": true
      },
      {
-      "id": "TREECKO",
+      "id": "FOMANTIS",
       "enc": true,
       "shiny": true
      },
@@ -757,7 +757,7 @@
       "shiny": true
      },
      {
-      "id": "MACHOP",
+      "id": "MAKUHITA",
       "enc": true,
       "shiny": true
      }
@@ -1062,7 +1062,7 @@
       "shiny": true
      },
      {
-      "id": "GRUBBIN",
+      "id": "WIMPOD",
       "enc": true,
       "shiny": true
      }
@@ -1179,7 +1179,7 @@
       "shiny": true
      },
      {
-      "id": "GASTLY",
+      "id": "SANDYGAST",
       "enc": true,
       "shiny": true
      },
@@ -1245,7 +1245,7 @@
       "shiny": true
      },
      {
-      "id": "DRATINI",
+      "id": "AXEW",
       "enc": true,
       "shiny": true
      }

@@ -28274,6 +28274,33 @@
   "mega": false
  },
  {
+  "id": "SLIGGOO_HISUIAN",
+  "base": "SLIGGOO",
+  "dex": 705,
+  "ko": "미끄네일",
+  "en": "Hisuian Sliggoo",
+  "atk": 153,
+  "def": 190,
+  "sta": 151,
+  "types": [
+   "STEEL",
+   "DRAGON"
+  ],
+  "fast": [
+   "TACKLE_FAST",
+   "WATER_GUN_FAST"
+  ],
+  "charged": [
+   "HEAVY_SLAM",
+   "DRAGON_PULSE",
+   "SLUDGE_WAVE",
+   "WATER_PULSE"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
   "id": "GOODRA",
   "base": "GOODRA",
   "dex": 706,
@@ -28300,6 +28327,34 @@
   "elite": [
    "THUNDER_PUNCH"
   ],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "GOODRA_HISUIAN",
+  "base": "GOODRA",
+  "dex": 706,
+  "ko": "미끄래곤",
+  "en": "Hisuian Goodra",
+  "atk": 211,
+  "def": 255,
+  "sta": 190,
+  "types": [
+   "STEEL",
+   "DRAGON"
+  ],
+  "fast": [
+   "DRAGON_TAIL_FAST",
+   "IRON_TAIL_FAST",
+   "WATER_GUN_FAST"
+  ],
+  "charged": [
+   "HEAVY_SLAM",
+   "DRACO_METEOR",
+   "SLUDGE_WAVE",
+   "HYDRO_PUMP"
+  ],
+  "elite": [],
   "cls": null,
   "mega": false
  },
