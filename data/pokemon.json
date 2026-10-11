@@ -6562,6 +6562,34 @@
   "mega": false
  },
  {
+  "id": "CROBAT_HALLOWEEN_2026_01",
+  "base": "CROBAT",
+  "dex": 169,
+  "ko": "크로뱃",
+  "en": "Crobat",
+  "atk": 194,
+  "def": 178,
+  "sta": 198,
+  "types": [
+   "POISON",
+   "FLYING"
+  ],
+  "fast": [
+   "AIR_SLASH_FAST",
+   "BITE_FAST"
+  ],
+  "charged": [
+   "SHADOW_BALL",
+   "AIR_CUTTER",
+   "SLUDGE_BOMB",
+   "POISON_FANG",
+   "CROSS_POISON"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
   "id": "CHINCHOU",
   "base": "CHINCHOU",
   "dex": 170,
@@ -21498,7 +21526,8 @@
   ],
   "fast": [
    "SHADOW_CLAW_FAST",
-   "SNARL_FAST"
+   "SNARL_FAST",
+   "SUCKER_PUNCH_FAST"
   ],
   "charged": [
    "FOUL_PLAY",
@@ -21506,7 +21535,9 @@
    "FLAMETHROWER",
    "NIGHT_SHADE"
   ],
-  "elite": [],
+  "elite": [
+   "SUCKER_PUNCH_FAST"
+  ],
   "cls": null,
   "mega": false
  },
@@ -31392,8 +31423,8 @@
   "dex": 774,
   "ko": "메테노",
   "en": "Minior",
-  "atk": 116,
-  "def": 194,
+  "atk": 218,
+  "def": 131,
   "sta": 155,
   "types": [
    "ROCK",
@@ -31472,6 +31503,214 @@
   "en": "Minior",
   "atk": 218,
   "def": 131,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노 (Meteor Form)",
+  "en": "Minior (Meteor Form)",
+  "atk": 116,
+  "def": 194,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR_BLUE",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노",
+  "en": "Minior",
+  "atk": 116,
+  "def": 194,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR_GREEN",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노",
+  "en": "Minior",
+  "atk": 116,
+  "def": 194,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR_INDIGO",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노",
+  "en": "Minior",
+  "atk": 116,
+  "def": 194,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR_ORANGE",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노",
+  "en": "Minior",
+  "atk": 116,
+  "def": 194,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR_RED",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노",
+  "en": "Minior",
+  "atk": 116,
+  "def": 194,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR_VIOLET",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노",
+  "en": "Minior",
+  "atk": 116,
+  "def": 194,
+  "sta": 155,
+  "types": [
+   "ROCK",
+   "FLYING"
+  ],
+  "fast": [
+   "ROLLOUT_FAST",
+   "TAKE_DOWN_FAST"
+  ],
+  "charged": [
+   "POWER_GEM",
+   "ANCIENT_POWER",
+   "ACROBATICS"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "MINIOR_METEOR_YELLOW",
+  "base": "MINIOR",
+  "dex": 774,
+  "ko": "메테노",
+  "en": "Minior",
+  "atk": 116,
+  "def": 194,
   "sta": 155,
   "types": [
    "ROCK",
@@ -34045,11 +34284,63 @@
   "mega": false
  },
  {
+  "id": "POLTEAGEIST_A_HALLOWEEN_2026_01",
+  "base": "POLTEAGEIST",
+  "dex": 855,
+  "ko": "포트데스",
+  "en": "Polteageist",
+  "atk": 248,
+  "def": 189,
+  "sta": 155,
+  "types": [
+   "GHOST"
+  ],
+  "fast": [
+   "ASTONISH_FAST",
+   "SUCKER_PUNCH_FAST",
+   "HEX_FAST"
+  ],
+  "charged": [
+   "SHADOW_BALL",
+   "DARK_PULSE",
+   "PSYCHIC"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
   "id": "POLTEAGEIST_ANTIQUE",
   "base": "POLTEAGEIST",
   "dex": 855,
   "ko": "포트데스 (진작폼)",
   "en": "Polteageist (Antique Form)",
+  "atk": 248,
+  "def": 189,
+  "sta": 155,
+  "types": [
+   "GHOST"
+  ],
+  "fast": [
+   "ASTONISH_FAST",
+   "SUCKER_PUNCH_FAST",
+   "HEX_FAST"
+  ],
+  "charged": [
+   "SHADOW_BALL",
+   "DARK_PULSE",
+   "PSYCHIC"
+  ],
+  "elite": [],
+  "cls": null,
+  "mega": false
+ },
+ {
+  "id": "POLTEAGEIST_P_HALLOWEEN_2026_01",
+  "base": "POLTEAGEIST",
+  "dex": 855,
+  "ko": "포트데스",
+  "en": "Polteageist",
   "atk": 248,
   "def": 189,
   "sta": 155,
