@@ -22848,6 +22848,38 @@
   "mega": false
  },
  {
+  "id": "CHANDELURE_MEGA",
+  "base": "CHANDELURE",
+  "dex": 609,
+  "ko": "메가샹델라",
+  "en": "Mega Chandelure",
+  "atk": 335,
+  "def": 227,
+  "sta": 155,
+  "types": [
+   "GHOST",
+   "FIRE"
+  ],
+  "fast": [
+   "HEX_FAST",
+   "FIRE_SPIN_FAST",
+   "INCINERATE_FAST",
+   "ASTONISH_FAST"
+  ],
+  "charged": [
+   "ENERGY_BALL",
+   "SHADOW_BALL",
+   "OVERHEAT",
+   "FLAME_CHARGE",
+   "POLTERGEIST"
+  ],
+  "elite": [
+   "POLTERGEIST"
+  ],
+  "cls": null,
+  "mega": true
+ },
+ {
   "id": "AXEW",
   "base": "AXEW",
   "dex": 610,
