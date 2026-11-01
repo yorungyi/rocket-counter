@@ -6576,7 +6576,8 @@
   ],
   "fast": [
    "AIR_SLASH_FAST",
-   "BITE_FAST"
+   "BITE_FAST",
+   "GUST_FAST"
   ],
   "charged": [
    "SHADOW_BALL",
