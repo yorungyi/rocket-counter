@@ -1,5 +1,5 @@
-/* 로켓단 대응기 서비스워커 — 빌드 202611012321 */
-const CACHE = 'rocket-counter-202611012321';
+/* 로켓단 대응기 서비스워커 — 빌드 202611082324 */
+const CACHE = 'rocket-counter-202611082324';
 const ASSETS = [
   './', './index.html', './manifest.webmanifest',
   './icon-192.png', './icon-512.png', './icon-maskable-512.png',
